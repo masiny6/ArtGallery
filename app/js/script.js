@@ -1,0 +1,7 @@
+@@include("../components/header/header.js")
+@@include("../components/slider/slider.js")
+@@include("../components/beginner/beginner.js")
+@@include("../components/works/works.js")
+@@include("../components/styles/styles.js")
+@@include("../components/news/news.js")
+@@include("../components/footer/footer.js")

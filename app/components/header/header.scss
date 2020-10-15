@@ -1,0 +1,270 @@
+.burger-menu,
+.menu-phone {
+    display: none;
+}
+
+
+.main-header {
+    width: 100%;
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+.main-header__centering {
+    display: flex;
+}
+.logo {
+    margin-right: 143px;
+}
+.main-logo {
+    font-family: "Proxima-Nova-Rg", sans-serif;
+    color: white;
+    font-size: 24px;
+    line-height: 18px;
+}
+.main-logo__elem {
+    font-family: "Proxima-Nova-Bl", sans-serif;
+    font-weight: 900;
+}
+.main-navigation {
+    min-width: 350px;
+    margin-right: 99px;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    .navigation__elem {
+        position: relative;
+    }
+    .navigation__link {
+        padding: 8px 28px 8px 28px;
+    }
+    .navigation__link:hover {
+        background-color: black;
+    }
+}
+.still-js::after {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 10px;
+    right: 10px;
+    top: 5px;
+    background-image: url(../assets/images/V.png);
+    background-repeat: no-repeat;
+}
+.still-centering {
+    position: absolute;
+    background-color: blue;
+    width: 100%;
+    min-height: 80px;
+    left: 0px;
+    top: 82px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+.still-list {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    .still-list__elem:not(:last-child) {
+        margin-right: 43px;
+    }
+
+    .still-list__link {
+        font-family: "Proxima-Nova-Rg", sans-serif;
+        color: black;
+        font-size: 16px;
+        line-height: 18px;
+        text-decoration: none;
+    }
+}
+.still-list::before {
+    content: " ";
+    position: absolute;
+    top: -30px;
+    left: 50vw;
+    border-top: 15px solid transparent;
+    border-left: 15px solid  transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+}
+.navigation__link {
+    font-family: "Proxima-Nova-Rg", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+    color: white;
+}
+.account-and-etc {
+    width: 445px;
+    display: flex;
+}
+.personal-account {
+    position: relative;
+    max-width: 125px;
+    margin-right: 40px;
+}
+.personal-account::before {
+    content: "";
+    position: absolute;
+    background-image: url(../assets/images/user.png);
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 23px;
+    left: -32px;
+    top: -5px;
+}
+.personal-account__link {
+    font-family: "Proxima-Nova-Rg", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+    color: white;
+}
+.list-etc {
+    display: flex;
+    width: 190px;
+    margin-right: 60px;
+}
+.list-etc__elem {
+    position: relative;
+
+    .list-etc__link {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    }
+    .favourites {
+        background-image: url(../assets/images/heart.png);
+        left: 40px;
+        top: -3px;
+    }
+    .basket {
+        background-image: url(../assets/images/bag.png);
+        left: 100px;
+        top: -5px;
+    }
+    .search {
+        background-image: url(../assets/images/search.png);
+        left: 160px;
+        top: -3px;
+    }
+}
+.search-centering {
+    content: "";
+    position: absolute;
+    background-color: #9febea;
+    width: 100%;
+    top: 82px;
+    left: 0px;
+    min-height: 142px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+.search-form {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    .search-form__input {
+        font-family: "Proxima-Nova-Lt", sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 42px;
+        width: 880px;
+        border: 0px;
+        outline: 0px;
+        height: 70px;
+        padding-left: 20px;
+    }
+    .search-form__button {
+        content: "";
+        position: absolute;
+        border: 0px;
+        outline: 0px;
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        right: 15px;
+        cursor: pointer;
+        background-color: transparent;
+        background-image: url(../assets/images/search-input.png);
+        background-repeat: no-repeat;
+    }
+    .search-form__button-clear {
+        content: "";
+        position: absolute;
+        border: 0px;
+        outline: 0px;
+        width: 30px;
+        height: 30px;
+        top: 18px;
+        right: 75px;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .search-form__button-clear::after,
+    .search-form__button-clear::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #656565;
+    }
+    .search-form__button-clear::after {
+        transform: rotate(-45deg);
+    }
+    .search-form__button-clear::before {
+        transform: rotate(45deg);
+    }
+}
+.languages {
+    position: relative;
+    .languages__ru {
+        font-family: "Proxima-Nova-Rg", sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        color: white;
+        text-decoration: none;
+    }
+    .languages-list {
+        position: absolute;
+        width: 50px;
+        min-height: 30px;
+        top: 50px;
+        left: -13px;
+        text-align: center;
+        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        display: none;
+        .languages-elem {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .languages__en {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .languages-list::before {
+        content: " ";
+        position: absolute;
+        top: -30px;
+        left: 0.8vw;
+        border-top: 15px solid transparent;
+        border-left: 15px solid  transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 15px solid white;
+    }
+}
