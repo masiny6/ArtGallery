@@ -1,0 +1,78 @@
+.main-footer {
+    .main-footer__up {
+        display: flex;
+    }
+    .painting-footer_up {
+        background-color: #1e2026;
+        padding-top: 91px;
+        padding-bottom: 74px;
+    }
+    .about-us {
+        margin-right: 124px;
+    }
+    .buyers {
+        margin-right: 10px;
+    }
+    .catalog {
+        margin-right: 110px;
+    }
+    .general-title {
+        font-family: "Proxima-Nova-Rg", sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+        color: white;
+        position: relative;
+    }
+    .general-title::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        bottom: -13px;
+    }
+    .about-us__title::before,
+    .buyers__title::before,
+    .catalog__title::before,
+    .contact__title::before {
+        background-color: #cbcbcb;
+    }
+    .social-network__title::before,
+    .payment-system__title {
+        background-color: #5f6165;
+    }
+    .general-list {
+        margin-top: 48px;
+        .general-link {
+            font-family: "Proxima-Nova-Lt", sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 18px;
+            text-decoration: none;
+            color: white;
+        }
+        .general-link:hover {
+            background-color: #009999;
+            padding: 9px 17px 9px 17px;
+            margin: -9px -17px -9px -17px;
+        }
+        .about-us__elem:not(:last-child),
+        .buyers__elem:not(:last-child),
+        .catalog__elem:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    .painting-footer_down {
+        background-color: #181a1f;
+    }
+    .social-network__list {
+        .svg-vk,
+        .svg-facebook,
+        .svg-ok,
+        .svg-insta {
+            width: 20px;
+        }
+    }
+    .payment-system__photo {
+        width: 100px;
+    }
+}

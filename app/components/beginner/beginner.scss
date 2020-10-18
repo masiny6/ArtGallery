@@ -1,16 +1,81 @@
 .beginner-section {
     background-color: #f7f8f8;
+    .centering {
+        margin-top: 43px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 65px;
+    }
 }
-.beginner-header {
-    text-align: center;
-    border-bottom: 1px solid #cbcbcb;
+.beginner-video {
+    width: 778px;
+    height: 435px;
+    position: relative;
+    .beginner-video__text {
+        font-family: "Proxima-Nova-Lt", sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 29px;
+        color: white;
+        position: absolute;
+        bottom: 42px;
+        left: 42px;
+        width: 620px;
+    }
 }
-.beginner-title {
-    font-family: "Proxima-Nova-Lt", sans-serif;
-    font-weight: 300;
-    font-size: 36px;
-    line-height: 42px;
-    padding-top: 53px;
-    padding-bottom: 28px;
-    letter-spacing: 1px;
+.beginner-video::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -7px;
+    border-top: 10px solid transparent;
+    border-left: 15px solid  #fff;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.beginner-video::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -37px;
+    margin-left: -38px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.beginner-expert {
+    width: 405px;
+    .beginner-expert__link {
+        text-decoration: none;
+    }
+    .beginner-expert__title {
+        font-family: "Proxima-Nova-Lt", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 42px;
+        color: #3e4246;
+        text-transform: uppercase;
+        border-bottom: 1px solid #cbcbcb;
+        position: relative;
+    }
+    .beginner-expert__title::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: black;
+        bottom: -1px;
+    }
+    .beginner-expert__text {
+        font-family: "Proxima-Nova-Lt", sans-serif;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 29px;
+        color: black;
+        margin-top: 22px;
+    }
 }

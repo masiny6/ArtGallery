@@ -31,7 +31,7 @@
 }
 .main-navigation {
     min-width: 350px;
-    margin-right: 99px;
+    margin-right: 109px;
 }
 .navigation {
     display: flex;
@@ -44,6 +44,7 @@
     }
     .navigation__link:hover {
         background-color: black;
+        transition: 0.3s;
     }
 }
 .still-js::after {
@@ -58,7 +59,7 @@
 }
 .still-centering {
     position: absolute;
-    background-color: blue;
+    background-color: white;
     width: 100%;
     min-height: 80px;
     left: 0px;
@@ -108,7 +109,7 @@
 .personal-account {
     position: relative;
     max-width: 125px;
-    margin-right: 40px;
+    margin-right: 50px;
 }
 .personal-account::before {
     content: "";
@@ -127,35 +128,89 @@
     text-decoration: none;
     color: white;
 }
+.drop-menu-account {
+    position: absolute;
+    background-color: white;
+    width: 277px;
+    min-height: 393px;
+    top: 55px;
+    left: -110px;
+    .centering-lists {
+        width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+        .first-section {
+            margin-top: 42px;
+        }
+        .second-section {
+            margin-top: 29px;
+        }
+        .third-section {
+            margin-top: 40px;
+        }
+        .centering-lists__item:not(:last-child) {
+            border-bottom: 1px solid #cccccc;
+        }
+        .centering-lists__general {
+            margin-bottom: 30px;
+            .centering-lists__link {
+                font-family: "Proxima-Nova-Rg", sans-serif;
+                font-size: 17px;
+                line-height: 18px;
+                text-decoration: none;
+                color: black;
+                padding-left: 21px;
+            }
+        }
+    }
+}
+.drop-menu-account-js {
+    display: none;
+}
+.drop-menu-account::before {
+    content: " ";
+    position: absolute;
+    top: -30px;
+    left: 125px;
+    border-top: 15px solid transparent;
+    border-left: 15px solid  transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
+}
 .list-etc {
     display: flex;
-    width: 190px;
-    margin-right: 60px;
+    width: 183px;
+    margin-right: 43px;
+    justify-content: space-between;
 }
 .list-etc__elem {
-    position: relative;
-
     .list-etc__link {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-repeat: no-repeat;
-    }
-    .favourites {
-        background-image: url(../assets/images/heart.png);
-        left: 40px;
-        top: -3px;
-    }
-    .basket {
-        background-image: url(../assets/images/bag.png);
-        left: 100px;
-        top: -5px;
-    }
-    .search {
-        background-image: url(../assets/images/search.png);
-        left: 160px;
-        top: -3px;
+        position: relative;
+        .svg-heart {
+            width: 22px;
+            fill: white;
+        }
+        .svg-basket {
+            width: 18px;
+            fill: white;
+            margin-top: -2px;
+        }
+        .svg-search {
+            width: 20px;
+            fill: white;
+        }
+        .counter {
+            font-family: "Proxima-Nova-Rg", sans-serif;
+            font-size: 13px;
+            line-height: 18px;
+            position: absolute;
+            color: white;
+            background-color: #656565;
+            border-radius: 40%;
+            padding: 0px 5px 0px 5px;
+            top: -10px;
+            right: -20px;
+        }
     }
 }
 .search-centering {
@@ -168,7 +223,6 @@
     min-height: 142px;
     display: flex;
     align-items: center;
-    display: none;
 }
 .search-form {
     width: 900px;
@@ -228,6 +282,9 @@
         transform: rotate(45deg);
     }
 }
+.search-centering-js {
+    display: none;
+}
 .languages {
     position: relative;
     .languages__ru {
@@ -241,13 +298,13 @@
         position: absolute;
         width: 50px;
         min-height: 30px;
-        top: 50px;
-        left: -13px;
+        top: 55px;
+        left: 50%;
+        margin-left: -25px;
         text-align: center;
-        background-color: blue;
+        background-color: white;
         display: flex;
         flex-direction: column;
-        display: none;
         .languages-elem {
             margin-top: 5px;
             margin-bottom: 5px;
@@ -256,15 +313,23 @@
             text-decoration: none;
             color: black;
         }
+        .languages__en:hover {
+            border-bottom: 1px solid black;
+            transition: 0.3s;
+        }
     }
     .languages-list::before {
         content: " ";
         position: absolute;
         top: -30px;
-        left: 0.8vw;
+        left: 50%;
+        margin-left: -15px;
         border-top: 15px solid transparent;
         border-left: 15px solid  transparent;
         border-right: 15px solid transparent;
         border-bottom: 15px solid white;
+    }
+    .languages-list-js {
+        display: none;
     }
 }
