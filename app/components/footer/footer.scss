@@ -8,13 +8,72 @@
         padding-bottom: 74px;
     }
     .about-us {
-        margin-right: 124px;
+        margin-right: 83px;
     }
     .buyers {
-        margin-right: 10px;
+        margin-right: 100px;
     }
     .catalog {
-        margin-right: 110px;
+        margin-right: 77px;
+    }
+    .contact {
+        margin-right: 129px;
+        .contact__list {
+            margin-top: 45px;
+        }
+        .contact__elem:not(:last-child) {
+            margin-bottom: 19px;
+        }
+        .contact__elem {
+            position: relative;
+            .svg-mail,
+            .svg-map {
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                fill: white;
+            }
+            .svg-mail {
+                width: 22px;
+            }
+            .svg-map {
+                width: 20px;
+            }
+        }
+        .contact__elem:nth-child(1)::before {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url(../assets/images/contact__tel.png);
+            background-repeat: no-repeat;
+            top: -2px;
+            left: 3px;
+        }
+        .contact__tel {
+            font-family: "Proxima-Nova-Rg", sans-serif;
+            font-size: 21px;
+            line-height: 24px;
+            text-decoration: none;
+            padding-left: 34px;
+        }
+        .contact__mail,
+        .contact__address {
+            font-family: "Proxima-Nova-Lt", sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+            text-decoration: none;
+            padding-left: 41px;
+            font-style: normal;
+        }
+        .contact__mail {
+            color: #cbcbcb;
+        }
+        .contact__address,
+        .contact__tel {
+            color: white;
+        }
     }
     .general-title {
         font-family: "Proxima-Nova-Rg", sans-serif;
@@ -37,7 +96,7 @@
         background-color: #cbcbcb;
     }
     .social-network__title::before,
-    .payment-system__title {
+    .payment-system__title::before {
         background-color: #5f6165;
     }
     .general-list {
@@ -61,18 +120,121 @@
             margin-bottom: 15px;
         }
     }
-    .painting-footer_down {
-        background-color: #181a1f;
-    }
     .social-network__list {
+        display: flex;
+        position: relative;
+        margin-top: 33px;
+        margin-bottom: 40px;
+        .social-icon__elem {
+            margin-right: 9px;
+            position: relative;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+        }
+        .social-icon__elem:hover {
+            .svg-vk,
+            .svg-facebook,
+            .svg-ok,
+            .svg-insta {
+                fill: #000;
+            }
+        }
+        .social-icon__link::before {
+            position: absolute;
+            content: "";
+            width: 41px;
+            height: 41px;
+            border: 1px solid #cbcbcb;
+            border-radius: 50%;
+        }
+        .social-icon__link:hover::before {
+            background-color:  #cbcbcb;
+        }
         .svg-vk,
         .svg-facebook,
         .svg-ok,
         .svg-insta {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            fill: #cbcbcb;
+        }
+        .svg-vk {
+            width: 23px;
+            margin-top: -10px;
+            margin-left: -13px;
+        }
+        .svg-facebook {
+            width: 11px;
+            height: 17px;
+            margin-top: -7px;
+            margin-left: -6px;
+        }
+        .svg-ok {
             width: 20px;
+            margin-top: -8px;
+            margin-left: -10px;
+        }
+        .svg-insta {
+            width: 20px;
+            height: 20px;
+            margin-top: -9px;
+            margin-left: -10px;
         }
     }
     .payment-system__photo {
-        width: 100px;
+        width: 280px;
+        margin-top: 34px;
+    }
+    .painting-footer_down {
+        padding-top: 25px;
+        padding-bottom: 24px;
+        background-color: #181a1f;
+        .main-footer__down {
+            display: flex;
+            align-items: center;
+        }
+        .document-list {
+            display: flex;
+            margin-right: 171px;
+            margin-top: -12px;
+            .document-elem__link {
+                font-family: "Proxima-Nova-Lt", sans-serif;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 18px;
+                color: white;
+                text-decoration: none;
+            }
+            .document-elem__link:hover {
+                text-decoration: underline;
+            }
+            .document-elem:not(:last-child) {
+                margin-right: 49px;
+            }
+        }
+        .copyright {
+            font-family: "Proxima-Nova-Lt", sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+            color: white;
+            margin-right: 460px;
+            margin-top: -10px;
+        }
+        .author {
+            .author__photo {
+                width: 100px;
+            }
+            .author__text {
+                font-family: "Proxima-Nova-Lt", sans-serif;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 18px;
+                color: #545455;
+            }
+        }
+
     }
 }
