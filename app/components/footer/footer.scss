@@ -113,6 +113,7 @@
             background-color: #009999;
             padding: 9px 17px 9px 17px;
             margin: -9px -17px -9px -17px;
+            transition: 0.3s;
         }
         .about-us__elem:not(:last-child),
         .buyers__elem:not(:last-child),
@@ -138,6 +139,7 @@
             .svg-ok,
             .svg-insta {
                 fill: #000;
+                transition: 0.3s;
             }
         }
         .social-icon__link::before {
@@ -150,6 +152,7 @@
         }
         .social-icon__link:hover::before {
             background-color:  #cbcbcb;
+            transition: 0.3s;
         }
         .svg-vk,
         .svg-facebook,

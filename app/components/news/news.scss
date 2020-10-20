@@ -48,6 +48,7 @@
             }
             .news__link-teg:hover {
                 color: #009999;
+                transition: 0.3s;
             }
             .news-data {
                 font-family: "Proxima-Nova-Rg", sans-serif;
@@ -76,6 +77,7 @@
         .news__link-title:hover {
             color: #009999;
             text-decoration: underline;
+            transition: 0.3s;
         }
         .news__text {
             font-family: "Proxima-Nova-Rg", sans-serif;
@@ -106,8 +108,10 @@
         }
         .news__link-look:hover {
             color: #009999;
+            transition: 0.3s;
             .svg-arrow {
                 fill: #009999;
+                transition: 0.3s;
             }
         }
     }

@@ -5,10 +5,10 @@ var swiper = new Swiper('.styles-section .swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    //autoplay: {
+    //    delay: 2500,
+    //    disableOnInteraction: false,
+    //},
     loop: true
 });
 $(".styles-section .swiper-button__next").on("click", function() {

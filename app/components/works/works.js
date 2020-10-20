@@ -7,3 +7,4 @@ var msnry = new Masonry('.js-grid', {
     stamp: '.js-static-item',
     percentPosition: true
 });
+$(".sort-list-js").select2();
