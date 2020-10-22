@@ -113,3 +113,19 @@
       transition: 0.3s;
   }
 }
+//Скрытие блоков
+@media (max-width: 1279px) {
+    .hidden-tablet {
+        display: none !important;
+    }
+}
+@media (max-width: 767px) {
+    .hidden-mobile {
+        display: none !important;
+    }
+}
+@media (min-width: 1280px) {
+    .hidden-desktop {
+        display: none !important;
+    }
+}

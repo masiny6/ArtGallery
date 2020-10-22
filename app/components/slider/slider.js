@@ -4,7 +4,8 @@ var swiper = new Swiper('.main-slider .swiper-container', {
         disableOnInteraction: false,
     },
     pagination: {
-        el: '.swiper-pagination',
+        clickable: true,
+        el: '.swiper-pagination'
     },
     loop: true
 });

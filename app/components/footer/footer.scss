@@ -241,3 +241,33 @@
 
     }
 }
+@media (max-width: 1280px) {
+    .main-footer {
+        .centering {
+            width: 92%;
+        }
+        .main-footer__up {
+            justify-content: space-between;
+        }
+        .contact {
+            margin-right: 0px;
+        }
+        .painting-footer_down {
+            .document-list {
+                display: flex;
+                flex-direction: column;
+                margin-right: 0px ;
+                .document-elem:not(:last-child) {
+                    margin-right: 0px;
+                }
+            }
+            .copyright {
+                margin-right: 0px;
+            }
+        }
+        .main-footer__down {
+            justify-content: space-between;
+        }
+    }
+    
+}

@@ -1,5 +1,6 @@
 .beginner-section {
     background-color: #f7f8f8;
+
     .centering {
         margin-top: 43px;
         display: flex;
@@ -7,10 +8,12 @@
         padding-bottom: 65px;
     }
 }
+
 .beginner-video {
     width: 778px;
     height: 435px;
     position: relative;
+
     .beginner-video__text {
         font-family: "Proxima-Nova-Lt", sans-serif;
         font-weight: 600;
@@ -23,6 +26,7 @@
         width: 620px;
     }
 }
+
 .beginner-video::before {
     content: "";
     position: absolute;
@@ -31,10 +35,11 @@
     margin-top: -12px;
     margin-left: -7px;
     border-top: 10px solid transparent;
-    border-left: 15px solid  #fff;
+    border-left: 15px solid #fff;
     border-right: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
+
 .beginner-video::after {
     content: "";
     position: absolute;
@@ -46,12 +51,16 @@
     height: 70px;
     border: 1px solid white;
     border-radius: 50%;
+    cursor: pointer;
 }
+
 .beginner-expert {
     width: 405px;
+
     .beginner-expert__link {
         text-decoration: none;
     }
+
     .beginner-expert__title {
         font-family: "Proxima-Nova-Lt", sans-serif;
         font-weight: 600;
@@ -62,6 +71,7 @@
         border-bottom: 1px solid #cbcbcb;
         position: relative;
     }
+
     .beginner-expert__title::before {
         content: "";
         position: absolute;
@@ -70,6 +80,7 @@
         background-color: black;
         bottom: -1px;
     }
+
     .beginner-expert__text {
         font-family: "Proxima-Nova-Lt", sans-serif;
         font-weight: 600;
@@ -77,5 +88,131 @@
         line-height: 29px;
         color: black;
         margin-top: 22px;
+    }
+}
+
+.beginner-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+
+    .beginner-popup__inner {
+        background-color: rgba($color: #000, $alpha: 0.5);
+        width: 70%;
+        height: 75%;
+        z-index: 4;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8%;
+    }
+
+    .beginner-popup__exit {
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background-color: white;
+        transform: rotate(45deg);
+        right: 5px;
+        top: 15px;
+    }
+
+    .beginner-popup__exit::before {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        background-color: white;
+        transform: rotate(90deg);
+    }
+
+    .beginner-popup__video {
+        width: 90%;
+        height: 90%;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .beginner-section {
+        .centering {
+            width: 92%;
+        }
+
+        .beginner-video {
+            width: 60%;
+            height: 50%;
+            position: relative;
+
+            .beginner-video__preview {
+                width: 100%;
+            }
+
+            .beginner-video__text {
+                font-size: 17px;
+                line-height: 24px;
+                bottom: 7%;
+                left: 28px;
+                width: 95%;
+            }
+        }
+
+        .beginner-expert {
+            width: 35%;
+
+            .beginner-expert__photo {
+                width: 100%;
+            }
+        }
+    }
+
+    .beginner-popup {
+        .beginner-popup__inner {
+            width: 90%;
+            height: 50%;
+            margin-top: 30%;
+        }
+
+        .beginner-popup__video {
+            width: 90%;
+            height: 90%;
+            margin-top: 4%;
+            margin-left: 5%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .beginner-section {
+        .centering {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .beginner-video {
+            width: 100%;
+            margin-bottom: 36px;
+
+            .beginner-video__preview {
+                width: 100%;
+            }
+
+            .beginner-video__text {
+                left: 15px;
+            }
+        }
+        .beginner-expert {
+            width: 100%;
+            .beginner-expert__photo {
+                width: 100%;
+            }
+        }
     }
 }

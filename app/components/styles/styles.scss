@@ -116,3 +116,15 @@
         margin-right: 36px;
     }
 }
+@media (max-width: 1280px) {
+    .styles-section {
+    .swiper-button {
+        position: absolute;
+        display: flex;
+        top: 50%;
+        left: 85%;
+        margin-top: -15px;
+        margin-left: 0px;
+    }
+}
+}
