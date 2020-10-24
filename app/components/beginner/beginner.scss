@@ -21,9 +21,10 @@
         line-height: 29px;
         color: white;
         position: absolute;
-        bottom: 42px;
-        left: 42px;
-        width: 620px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        padding: 42px;
     }
 }
 
@@ -158,9 +159,7 @@
             .beginner-video__text {
                 font-size: 17px;
                 line-height: 24px;
-                bottom: 7%;
-                left: 28px;
-                width: 95%;
+                padding: 28px;
             }
         }
 
@@ -169,6 +168,14 @@
 
             .beginner-expert__photo {
                 width: 100%;
+            }
+            .beginner-expert__title {
+                font-size: 12px;
+                line-height: 42px;
+            }
+            .beginner-expert__text {
+                font-size: 15px;
+                line-height: 21px;
             }
         }
     }
@@ -199,13 +206,12 @@
         .beginner-video {
             width: 100%;
             margin-bottom: 36px;
+            .beginner-video__text {
+                padding: 15px;
+            }
 
             .beginner-video__preview {
                 width: 100%;
-            }
-
-            .beginner-video__text {
-                left: 15px;
             }
         }
         .beginner-expert {

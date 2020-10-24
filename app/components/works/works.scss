@@ -172,7 +172,7 @@
 .photo-works {
     .photo {
         width: 100%;
-        height: 100%;
+        height: auto;
         border-bottom: 1px solid #ededed;
     }
 }
@@ -276,9 +276,16 @@
                 margin-right: 23px;
                 .svg-heart {
                     width: 22px;
+                    fill: white;
+                    stroke: black;
+                    stroke-width: 2px;
+                }
+                .svg-heart-js {
+                    fill: #009999;
+                    stroke: #009999;
                 }
                 .svg-heart:hover {
-                    fill: #009999;
+                    stroke: #009999;
                     transition: 0.3s;
                     cursor: pointer;
                 }
@@ -287,9 +294,16 @@
                 margin-top: 9px;
                 .svg-basket {
                     width: 18px;
+                    fill: white;
+                    stroke: black;
+                    stroke-width: 2px;
+                }
+                .svg-basket-js {
+                    fill: #009999;
+                    stroke: #009999;
                 }
                 .svg-basket:hover {
-                    fill: #009999;
+                    stroke: #009999;
                     transition: 0.3s;
                     cursor: pointer;
                 }

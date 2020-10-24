@@ -2,30 +2,39 @@
     .main-footer__up {
         display: flex;
     }
+
     .painting-footer_up {
         background-color: #1e2026;
         padding-top: 91px;
         padding-bottom: 74px;
     }
+
     .about-us {
         margin-right: 83px;
     }
+
     .buyers {
         margin-right: 100px;
     }
+
     .catalog {
         margin-right: 77px;
     }
+
     .contact {
         margin-right: 129px;
+
         .contact__list {
             margin-top: 45px;
         }
+
         .contact__elem:not(:last-child) {
             margin-bottom: 19px;
         }
+
         .contact__elem {
             position: relative;
+
             .svg-mail,
             .svg-map {
                 position: absolute;
@@ -33,13 +42,16 @@
                 top: 3px;
                 fill: white;
             }
+
             .svg-mail {
                 width: 22px;
             }
+
             .svg-map {
                 width: 20px;
             }
         }
+
         .contact__elem:nth-child(1)::before {
             content: "";
             position: absolute;
@@ -50,6 +62,7 @@
             top: -2px;
             left: 3px;
         }
+
         .contact__tel {
             font-family: "Proxima-Nova-Rg", sans-serif;
             font-size: 21px;
@@ -57,6 +70,7 @@
             text-decoration: none;
             padding-left: 34px;
         }
+
         .contact__mail,
         .contact__address {
             font-family: "Proxima-Nova-Lt", sans-serif;
@@ -67,14 +81,17 @@
             padding-left: 41px;
             font-style: normal;
         }
+
         .contact__mail {
             color: #cbcbcb;
         }
+
         .contact__address,
         .contact__tel {
             color: white;
         }
     }
+
     .general-title {
         font-family: "Proxima-Nova-Rg", sans-serif;
         font-size: 18px;
@@ -82,6 +99,7 @@
         color: white;
         position: relative;
     }
+
     .general-title::before {
         content: "";
         position: absolute;
@@ -89,18 +107,22 @@
         height: 1px;
         bottom: -13px;
     }
+
     .about-us__title::before,
     .buyers__title::before,
     .catalog__title::before,
     .contact__title::before {
         background-color: #cbcbcb;
     }
+
     .social-network__title::before,
     .payment-system__title::before {
         background-color: #5f6165;
     }
+
     .general-list {
         margin-top: 48px;
+
         .general-link {
             font-family: "Proxima-Nova-Lt", sans-serif;
             font-weight: 300;
@@ -109,23 +131,27 @@
             text-decoration: none;
             color: white;
         }
+
         .general-link:hover {
             background-color: #009999;
             padding: 9px 17px 9px 17px;
             margin: -9px -17px -9px -17px;
             transition: 0.3s;
         }
+
         .about-us__elem:not(:last-child),
         .buyers__elem:not(:last-child),
         .catalog__elem:not(:last-child) {
             margin-bottom: 15px;
         }
     }
+
     .social-network__list {
         display: flex;
         position: relative;
         margin-top: 33px;
         margin-bottom: 40px;
+
         .social-icon__elem {
             margin-right: 9px;
             position: relative;
@@ -133,7 +159,9 @@
             height: 43px;
             border-radius: 50%;
         }
+
         .social-icon__elem:hover {
+
             .svg-vk,
             .svg-facebook,
             .svg-ok,
@@ -142,6 +170,7 @@
                 transition: 0.3s;
             }
         }
+
         .social-icon__link::before {
             position: absolute;
             content: "";
@@ -150,10 +179,12 @@
             border: 1px solid #cbcbcb;
             border-radius: 50%;
         }
+
         .social-icon__link:hover::before {
-            background-color:  #cbcbcb;
+            background-color: #cbcbcb;
             transition: 0.3s;
         }
+
         .svg-vk,
         .svg-facebook,
         .svg-ok,
@@ -163,22 +194,26 @@
             left: 50%;
             fill: #cbcbcb;
         }
+
         .svg-vk {
             width: 23px;
             margin-top: -10px;
             margin-left: -13px;
         }
+
         .svg-facebook {
             width: 11px;
             height: 17px;
             margin-top: -7px;
             margin-left: -6px;
         }
+
         .svg-ok {
             width: 20px;
             margin-top: -8px;
             margin-left: -10px;
         }
+
         .svg-insta {
             width: 20px;
             height: 20px;
@@ -186,22 +221,27 @@
             margin-left: -10px;
         }
     }
+
     .payment-system__photo {
         width: 280px;
         margin-top: 34px;
     }
+
     .painting-footer_down {
         padding-top: 25px;
         padding-bottom: 24px;
         background-color: #181a1f;
+
         .main-footer__down {
             display: flex;
             align-items: center;
         }
+
         .document-list {
             display: flex;
             margin-right: 171px;
             margin-top: -12px;
+
             .document-elem__link {
                 font-family: "Proxima-Nova-Lt", sans-serif;
                 font-weight: 300;
@@ -210,13 +250,16 @@
                 color: white;
                 text-decoration: none;
             }
+
             .document-elem__link:hover {
                 text-decoration: underline;
             }
+
             .document-elem:not(:last-child) {
                 margin-right: 49px;
             }
         }
+
         .copyright {
             font-family: "Proxima-Nova-Lt", sans-serif;
             font-weight: 300;
@@ -226,10 +269,12 @@
             margin-right: 460px;
             margin-top: -10px;
         }
+
         .author {
             .author__photo {
                 width: 100px;
             }
+
             .author__text {
                 font-family: "Proxima-Nova-Lt", sans-serif;
                 font-weight: 300;
@@ -241,33 +286,115 @@
 
     }
 }
+
 @media (max-width: 1280px) {
     .main-footer {
         .centering {
             width: 92%;
         }
+
         .main-footer__up {
             justify-content: space-between;
         }
+
         .contact {
             margin-right: 0px;
         }
+
         .painting-footer_down {
             .document-list {
                 display: flex;
                 flex-direction: column;
-                margin-right: 0px ;
+                margin-right: 0px;
+
                 .document-elem:not(:last-child) {
                     margin-right: 0px;
                 }
             }
+
             .copyright {
                 margin-right: 0px;
             }
         }
+
         .main-footer__down {
             justify-content: space-between;
         }
     }
-    
+
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        .painting-footer_up {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+
+        .main-footer__up {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+        }
+
+        .social-network {
+            position: absolute;
+            top: -55px;
+            left: 50%;
+            margin-left: -100px;
+        }
+
+        .payment-system__photo {
+            width: 207px;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .contact {
+            margin-left: -40px;
+        }
+        .contact__title,
+        .social-network__title,
+        .payment-system__title {
+            display: none;
+        }
+        .painting-footer_down {
+            background-color: #1e2026;
+            padding-top: 8px;
+        }
+        .main-footer__down {
+            display: flex;
+            flex-direction: column;
+            .document-list {
+                order: 2;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .copyright {
+                order: 1;
+                width: 109%;
+                background-color: #191b1f;
+                padding: 16px 0px 16px 0px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .author {
+                order: 3;
+                .author__text-mobile {
+                    font-family: "Proxim-Nova-Lt", sans-serif;
+                    font-weight: 300;
+                    font-size: 12px;
+                    line-height: 13px;
+                    color: white;
+                    .author__text-mobile-link {
+                        color: white;
+                    }
+                }
+            }
+            .author__text-mobile {
+                display: block !important;
+            }
+        }
+    }
 }

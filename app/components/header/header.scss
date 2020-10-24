@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     z-index: 2;
+    padding-top: 4px;
 }
 
 .main-header__centering {
@@ -74,7 +75,8 @@
     width: 100%;
     min-height: 80px;
     left: 0px;
-    top: 82px;
+    margin-left: -633px;
+    top: 54px;
     display: flex;
     align-items: center;
 }

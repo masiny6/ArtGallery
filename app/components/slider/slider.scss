@@ -1,6 +1,9 @@
 .main-slider {
     min-height: 800px;
     z-index: -1;
+    .swiper-container {
+        height: 800px;
+    }
     .swiper-slide {
         background-image: url(../assets/images/background-slide-1.jpg);
         background-repeat: no-repeat;
@@ -30,7 +33,7 @@
         margin-left: auto;
         margin-right: auto;
         text-align: left;
-        margin-top: 236px;
+        margin-top: 242px;
     }
     .main-slider__string_one {
         font-family: "Proxima-Nova-Rg", sans-serif;
@@ -39,18 +42,18 @@
         color: white;
         background-color: rgba($color: #000000, $alpha: 0.8);
         display: inline;
-        padding: 7px 27px 7px 27px;
+        padding: 5px 29px 5px 29px;
         box-decoration-break: clone;
     }
     .main-slider__string_two {
         font-family: "Proxima-Nova-Lt", sans-serif;
         font-weight: 300;
         font-size: 49px;
-        line-height: 64px;
+        line-height: 62px;
         color: white;
         background-color: rgba($color: #000000, $alpha: 0.8);
         display: inline;
-        padding: 0px 38px 10px 27px;
+        padding: 0px 40px 5px 27px;
         box-decoration-break: clone;
     }
     .main-slider__string_three {
@@ -60,9 +63,9 @@
         color: white;
         background-color: rgba($color: #000000, $alpha: 0.8);
         margin-bottom: 64px;
-        margin-top: 20px;
+        margin-top: 9px;
         width: max-content;
-        padding: 3px 50px 15px 27px;
+        padding: 9px 55px 11px 27px;
         box-decoration-break: clone;
     }
     .main-slider__button {
@@ -72,7 +75,7 @@
         color: white;
         text-decoration: none;
         background-color: rgba($color: #000000, $alpha: 0.6);
-        padding: 17px 74px 17px 74px;
+        padding: 17px 75px 17px 75px;
         border: 1px solid white;
     }
     .main-slider__button:hover {
@@ -84,12 +87,15 @@
 @media (max-width: 1279px) {
     .main-slider {
         min-height: 600px;
+        .swiper-container {
+            height: 600px;
+        }
+        .swiper-pagination {
+            bottom: 50px;
+        }
         .main-slider__text {
-            width: 100%;
-            padding-left: 20px;
-            padding-right: 20px;
-            text-align: left;
-            margin-top: 236px;
+            width: 95%;
+            margin-top: 150px;
         }
     }
 }

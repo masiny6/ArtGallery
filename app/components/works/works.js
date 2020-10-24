@@ -9,3 +9,9 @@ var msnry = new Masonry('.js-grid', {
 });
 $(".sort-list-js").select2();
 $('.photo-works photo').imagesLoaded( function() {});
+$(".svg-basket").on("click", function() {
+    $(this).toggleClass("svg-basket-js");
+})
+$(".svg-heart").on("click", function() {
+    $(this).toggleClass("svg-heart-js");
+})
