@@ -23,6 +23,10 @@
     margin-right: 143px;
 }
 
+.main-logo-mobile {
+    display: none;
+}
+
 .main-logo {
     font-family: "Proxima-Nova-Rg", sans-serif;
     color: white;
@@ -75,8 +79,8 @@
     width: 100%;
     min-height: 80px;
     left: 0px;
-    margin-left: -633px;
-    top: 54px;
+    margin-left: -0px;
+    top: 86px;
     display: flex;
     align-items: center;
 }
@@ -415,7 +419,7 @@
     }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1280px) {
 
     .burger-menu,
     .menu-phone {
@@ -480,13 +484,12 @@
             width: 100%;
             min-height: 126px;
             margin-right: 0px;
-            top: 70px;
+            top: 85px;
             left: 0px;
             background-color: white;
             padding-left: 36px;
             padding-right: 36px;
 
-            display: none;
 
             .navigation {
                 justify-content: flex-start;
@@ -517,28 +520,41 @@
                 background-color: transparent;
                 width: 100%;
                 min-height: 0px;
-                display: none;
+                left: 0px;
+                display: inline-block;
+            }
+
+            .still-js {
+                display: block !important;
             }
 
             .still-list {
                 width: 100%;
                 padding-left: 64px;
             }
+            .still-list::before {
+                top: -115px;
+                left: 3vw;
+            }
+        }
+        .main-navigation-js {
+            display: none;
         }
 
-        padding-left: 25px;
         .logo {
+            padding-left: 25px;
             margin-right: 0px;
         }
     }
 }
 
 @media (max-width: 768px) {
-
     .personal-account__name,
-    .languages {
+    .languages,
+    .main-logo {
         display: none;
     }
+
     .burger-menu {
         background-color: black;
     }
@@ -551,9 +567,82 @@
     .main-header {
         background-color: white;
     }
-    .account-and-etc {
-        width: 250px;
+
+    .main-logo-mobile {
+        padding-left: 20px;
+        font-family: "Proxima-Nova-Rg", sans-serif;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 18px;
+        display: block;
+
+        .main-logo__elem {
+            font-family: "Proxima-Nova-Bl", sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 18px;
+        }
     }
+    .main-header {
+        .main-navigation {
+            min-height: 350px;
+            .navigation {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                .navigation__elem {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    
+    .still-centering {
+        top: 145px;
+    }
+    .still-list {
+        flex-direction: column;
+        .still-list__elem {
+        display: block !important;
+        position: relative;
+        }
+        .still-list__elem:nth-child(3) {
+            margin-top: 20px;
+        }
+        .still-list__elem:nth-child(3)::before {
+            content: "";
+            position: absolute;
+            width: 264px;
+            height: 1px;
+            left: -15px;
+            top: -25px;
+            background-color: gray;
+        }
+        .still-list__elem:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+    .copyright-mobile {
+        font-family: "Proxima-Nova-Lt", sans-serif;
+        font-size: 300;
+        font-size: 12px;
+        line-height: 18px;
+        background-color: #cccccc;
+        color: #333333;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        text-align: center;
+        padding-right: 15%;
+        margin-top: 35px;
+    }
+    .still-list::before {
+        display: none;
+    }
+    .account-and-etc {
+        width: 150px;
+        padding-right: 20px;
+    }
+
     .list-etc__elem {
         .list-etc__link {
             .svg-heart {
@@ -569,10 +658,12 @@
             }
         }
     }
+
     .personal-account {
-        margin-right: 0px;
+        margin-right: 20px;
 
     }
+
     .personal-account::before {
         content: "";
         position: absolute;
@@ -585,10 +676,12 @@
         top: -12px;
         border-radius: 50%;
     }
+
     .list-etc {
         display: flex;
         min-width: 100px;
         margin-right: 0px;
         justify-content: space-between;
     }
+
 }

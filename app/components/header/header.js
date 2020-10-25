@@ -14,4 +14,6 @@ $(".still").mouseover(function() {
 $(".still-js").mouseout(function(){           
     $(".still-centering").toggleClass("still-js");
 });
-  
+$(".burger-menu").on("click", function() {
+    $(".main-navigation").toggleClass("main-navigation-js");
+});

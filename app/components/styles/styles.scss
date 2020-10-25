@@ -212,14 +212,29 @@
             margin-top: -15px;
             margin-left: 0px;
         }
+        .swiper-container {
+            height: auto;
+        }
         .swiper-slide {
-            width: 65% !important;
+            width: 49% !important;
         }
-        .swiper-slide:nth-child(1) {
-            width: 100% !important;
-        }
-        .swiper-slide:nth-child(2) {
-            width: 48% !important;
+        .styles-text__elem {
+
+        padding: 0px 20px;
+            &_up {
+                font-family: "Proxima-Nova-Rg", sans-serif;
+                font-size: 16px;
+                line-height: 20px;
+                bottom: 100%;
+            }
+    
+            &_down {
+                font-family: "Proxima-Nova-Lt", sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                top: 100%;
+            }
         }
     }
 }
