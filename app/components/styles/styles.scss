@@ -215,9 +215,6 @@
         .swiper-container {
             height: auto;
         }
-        .swiper-slide {
-            width: 49% !important;
-        }
         .styles-text__elem {
 
         padding: 0px 20px;
@@ -234,6 +231,103 @@
                 font-size: 18px;
                 line-height: 24px;
                 top: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .styles-section {
+        .centering {
+            margin-top: 100px;
+        }
+        .swiper-button {
+            left: 50%;
+            margin-top: 70px;
+            margin-left: -60px;
+        }
+    }
+    .styles-list {
+        position: relative;
+        background-size: 0 0;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    
+        &::after {
+            content: '';
+            display: block;
+            padding-top: 47%;
+            background-color: transparent;/**/
+            opacity: 0.6;
+            position: relative;
+            transition: opacity 1s ease 0s;
+        }
+    
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: inherit;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transform: scale(1);
+            transition: transform 1s ease 0s;
+        }
+    
+        .styles-list__elem {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            color: black;/**/
+            z-index: 1;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 1px;
+                width: 40px;
+                background-color: black;/**/
+                margin: 0 auto;
+            }
+        }
+    
+        .styles-text__elem {
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 5px 20px;
+    
+            &_up {
+                font-family: "Proxima-Nova-Rg", sans-serif;
+                font-size: 14px;/**/
+                line-height: 25px;
+                bottom: 100%;
+            }
+    
+            &_down {
+                font-family: "Proxima-Nova-Lt", sans-serif;
+                font-weight: 600;
+                font-size: 14px;/**/
+                line-height: 29px;
+                top: 100%;
+            }
+        }
+    
+        &:hover {
+            &::before {
+                transform: scale(1.5);
+            }
+    
+            &::after {
+                opacity: 0.8;
             }
         }
     }

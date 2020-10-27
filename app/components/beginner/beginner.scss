@@ -13,6 +13,7 @@
     width: 778px;
     height: 435px;
     position: relative;
+    cursor: pointer;
 
     .beginner-video__text {
         font-family: "Proxima-Nova-Lt", sans-serif;
@@ -52,7 +53,6 @@
     height: 70px;
     border: 1px solid white;
     border-radius: 50%;
-    cursor: pointer;
 }
 
 .beginner-expert {
@@ -80,8 +80,19 @@
         height: 1px;
         background-color: black;
         bottom: -1px;
+        transition: 0.3s;
     }
-
+    .beginner-expert__title:hover {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            bottom: -1px;
+            transition: 0.3s;
+        }
+    }
     .beginner-expert__text {
         font-family: "Proxima-Nova-Lt", sans-serif;
         font-weight: 600;
@@ -89,6 +100,11 @@
         line-height: 29px;
         color: black;
         margin-top: 22px;
+        transition: 0.3s;
+    }
+    .beginner-expert__text:hover {
+        color: #009999;
+        transition: 0.3s;
     }
 }
 
@@ -101,7 +117,6 @@
     z-index: 3;
     width: 100%;
     background-color: rgba($color: #000000, $alpha: 0.5);
-    display: none;
 
     .beginner-popup__inner {
         background-color: transparent;
@@ -139,6 +154,9 @@
         margin-top: 3%;
         margin-left: 5%;
     }
+}
+.beginner-popup-js {
+    display: none;
 }
 
 @media (max-width: 1280px) {

@@ -16,7 +16,7 @@
     background-color: #f3f4f5;
 
     .swiper-container {
-        height: 220px;
+        height: auto;
     }
 
     .centering {
@@ -159,6 +159,9 @@
             justify-content: center;
         }
     }
+    .svg-arrow {
+        animation-name: arrow-new !important;
+    }
 }
 @media (max-width: 768px) {
     .news-section {
@@ -167,7 +170,6 @@
             padding-bottom: 115px;
         }
         .section-header {
-            border-bottom: 0px;
             .swiper-button {
                 left: 50%;
                 margin-top: 70px;
