@@ -130,12 +130,14 @@
             line-height: 18px;
             text-decoration: none;
             color: white;
+            padding: 9px 17px 9px 17px;
+            margin: 0 -17px;
+            transition: 0.3s;
         }
 
         .general-link:hover {
             background-color: #009999;
             padding: 9px 17px 9px 17px;
-            margin: -9px -17px -9px -17px;
             transition: 0.3s;
         }
 
@@ -190,35 +192,30 @@
         .svg-ok,
         .svg-insta {
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
             fill: #cbcbcb;
         }
 
         .svg-vk {
             width: 23px;
-            margin-top: -10px;
-            margin-left: -13px;
         }
 
         .svg-facebook {
             width: 11px;
             height: 17px;
-            margin-top: -7px;
-            margin-left: -6px;
         }
 
         .svg-ok {
             width: 20px;
-            margin-top: -8px;
-            margin-left: -10px;
         }
 
         .svg-insta {
             width: 20px;
             height: 20px;
-            margin-top: -9px;
-            margin-left: -10px;
         }
     }
 
@@ -287,7 +284,7 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .main-footer {
         .centering {
             width: 92%;
@@ -324,7 +321,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .main-footer {
         .painting-footer_up {
             padding-top: 50px;

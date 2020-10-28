@@ -22,7 +22,9 @@
 .logo {
     margin-right: 143px;
 }
-
+.logo-link {
+    text-decoration: none;
+}
 .main-logo-mobile {
     display: none;
 }
@@ -71,6 +73,15 @@
     top: 5px;
     background-image: url(../assets/images/V.png);
     background-repeat: no-repeat;
+}
+.still::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    background-color: transparent;
+    bottom: -30px;
+    left: 0px;
 }
 
 .still-centering {
@@ -212,7 +223,6 @@
                 padding-left: 21px;
                 display: block;
             }
-
             .centering-lists__link:hover {
                 background-color: rgba($color: #333333, $alpha: 1.0);
                 padding: 16px 0px 16px 21px;
@@ -221,6 +231,27 @@
                 transition: 0.3s;
             }
         }
+    }
+    .exit {
+        position: relative;
+        &__link {
+            padding-left: 36px !important;
+        }
+    }
+    .exit::before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 20px;
+        top: -1px;
+        left: 2px;
+        background-image: url(../assets/images/exit.png);
+    }
+    .exit:hover::before {
+        top: 50%;
+        margin-top: -10px;
+        background-image: url(../assets/images/exit-hover.png) !important;
     }
 }
 
@@ -363,6 +394,7 @@
 
 .languages {
     position: relative;
+    font-family: "Proxima-Nova-Rg", sans-serif;
 
     .languages__ru {
         font-family: "Proxima-Nova-Rg", sans-serif;
@@ -421,7 +453,7 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .burger-menu,
     .menu-phone {
@@ -472,6 +504,13 @@
     .burger-menu:checked::before {
         opacity: 0;
         transition: 0.1s;
+    }
+    .menu-phone {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 22px;
+        top: 25px;
     }
 
     .main-header {
@@ -557,7 +596,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .personal-account__name,
     .languages,
     .main-logo {
@@ -574,7 +613,13 @@
     .burger-menu::before {
         background-color: black;
     }
-
+    .menu-phone {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 8px;
+        top: 11px;
+    }
     .main-logo-mobile {
         padding-left: 18px;
         padding-top: 1px;
@@ -583,12 +628,14 @@
         font-size: 24px;
         line-height: 18px;
         display: block;
+        color: black;
 
         .main-logo__elem {
             font-family: "Proxima-Nova-Bl", sans-serif;
             font-weight: 900;
             font-size: 24px;
             line-height: 18px;
+            color: black;
         }
     }
     .main-header {
@@ -605,6 +652,11 @@
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
+                .navigation__link {
+                    padding: 8px 15px 8px 15px;
+                    margin-left: 13px;
+                    color: black;
+                }
                 .navigation__elem {
                     margin-bottom: 25px;
                 }
@@ -627,7 +679,7 @@
         .still-list__elem:nth-child(3)::before {
             content: "";
             position: absolute;
-            width: 264px;
+            width: 80%;
             height: 1px;
             left: -15px;
             top: -25px;
@@ -691,6 +743,25 @@
         left: -32px;
         top: -12px;
         border-radius: 50%;
+    }
+    .search-centering {
+        min-height: 70px;
+    }
+    
+    .search-form {
+    
+        .search-form__input {
+            height: 40px;
+        }
+        .search-form__button {
+            top: 8px;
+            right: -5px;
+        }
+    
+        .search-form__button-clear {
+            top: 5px;
+            right: 50px;
+        }
     }
     /*.drop-menu-account {
         position: absolute;

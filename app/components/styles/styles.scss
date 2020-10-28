@@ -24,7 +24,7 @@
 .swiper-slide:nth-child(even) {
     .styles-list-one {
         .styles-list__elem {
-            margin-top: -5px;
+            margin-top: 0px;
 
             &::after {
                 top: 5px;
@@ -55,7 +55,7 @@
 .swiper-slide:nth-child(even) {
 .styles-list-two {
     .styles-list__elem {
-        margin-top: 10px;
+        margin-top: 0px;
 
         &::after {
             top: 9px;
@@ -71,7 +71,7 @@
 .swiper-slide:nth-child(odd) {
     .styles-list-two {
         .styles-list__elem {
-            margin-top: -4px;
+            margin-top: 0px;
 
             &::after {
                 top: 10px;
@@ -141,7 +141,7 @@
         left: 0;
         right: 0;
         text-align: center;
-        padding: 5px 20px;
+        padding: 0px 20px;
 
         &_up {
             font-family: "Proxima-Nova-Rg", sans-serif;
@@ -199,7 +199,7 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .styles-section {
         .centering {
             width: 92%;
@@ -235,7 +235,7 @@
         }
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .styles-section {
         .centering {
             margin-top: 100px;

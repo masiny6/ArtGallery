@@ -72,10 +72,6 @@
         color: black;
     }
 
-    .select2-search__field {
-        outline: 0 !important;
-    }
-
     .select2-selection {
         height: 40px;
         border-radius: 0px;
@@ -83,16 +79,26 @@
         outline: 0;
     }
 
-    .select2-selection__arrow {
-        display: none;
-    }
-
-    .select2-container .select2-dropdown {
-        border: 0px !important;
-        border-radius: 0px !important;
-    }
+    /*.select2-selection__arrow {
+        background-image: url(../assets/images/select2-arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+    }*/
 }
-
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    display: none !important;
+}
+.select2-container .select2-dropdown {
+    border: 0px !important;
+    border-radius: 0px !important;
+    border-top: 1px solid grey !important;
+}
+.select2-results__option {
+    font-family: "Proxima-Nova-Rg", sans-serif;
+}
+.select2-results__option:hover {
+    background-color: rgba(209, 203, 203, 0.5);
+}
 .grid {
     margin: 0 auto;
     max-width: 100%;
@@ -156,7 +162,7 @@
             position: relative;
             padding-left: 41px;
             margin-top: 13px;
-            margin-bottom: 55px;
+            margin-bottom: 42px;
         }
 
         .static-text::before {
@@ -174,7 +180,6 @@
             left: 1px;
             bottom: 27px;
         }
-
         .static-link {
             font-family: "Proxima-Nova-Semibold", sans-serif;
             font-weight: 600;
@@ -183,8 +188,15 @@
             color: white;
             text-decoration: none;
             padding-left: 75px;
+            padding-bottom: 13px;
+            padding-top: 13px;
+            display: block;
+            transition: 0.3s;
         }
-
+        .static-link:hover {
+            background-color: #009898;
+            transition: 0.3s;
+        }
         .svg-arrow {
             position: absolute;
             fill: white;
@@ -371,7 +383,7 @@
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
 
     .grid__sizer,
     .grid__item,
@@ -457,7 +469,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .grid__sizer,
     .grid__item,
