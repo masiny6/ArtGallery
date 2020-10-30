@@ -256,7 +256,7 @@
             content: '';
             display: block;
             padding-top: 47%;
-            background-color: transparent;/**/
+            background-color: transparent;
             opacity: 0.6;
             position: relative;
             transition: opacity 1s ease 0s;
@@ -282,7 +282,7 @@
             left: 0;
             right: 0;
             top: 50%;
-            color: black;/**/
+            color: black;
             z-index: 1;
     
             &::after {
@@ -293,7 +293,7 @@
                 top: 0;
                 height: 1px;
                 width: 40px;
-                background-color: black;/**/
+                background-color: black;
                 margin: 0 auto;
             }
         }
@@ -307,7 +307,7 @@
     
             &_up {
                 font-family: "Proxima-Nova-Rg", sans-serif;
-                font-size: 14px;/**/
+                font-size: 14px;
                 line-height: 25px;
                 bottom: 100%;
             }
@@ -315,7 +315,7 @@
             &_down {
                 font-family: "Proxima-Nova-Lt", sans-serif;
                 font-weight: 600;
-                font-size: 14px;/**/
+                font-size: 14px;
                 line-height: 29px;
                 top: 100%;
             }

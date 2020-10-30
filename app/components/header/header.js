@@ -29,21 +29,22 @@ $(".burger-menu").on("click", function() {
     $(".main-navigation").toggleClass("main-navigation-js");
 });
 $(document).on("click", function (e){ // событие клика по странице
-    if (!$(".personal-account__name").is(e.target) && // если клик сделан не по элементу
+    if (!$(".personal-account").is(e.target) && // если клик сделан не по элементу
         $(".personal-account .centering-lists").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
             $(".drop-menu-account").addClass("drop-menu-account-js");
     }
-});
-$(document).on("click", function (e){ // событие клика по странице
     if (!$(".languages__ru").is(e.target) && // если клик сделан не по элементу
-        $(".languages-list").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
-            $(".languages-list").addClass("languages-list-js");
+    $(".languages-list").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+        $(".languages-list").addClass("languages-list-js");
     }
-});
-$(document).on("click", function (e){ // событие клика по странице
     if (!$(".svg-search").is(e.target) && // если клик сделан не по элементу
-        $(".search-centering").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
-            $(".search-centering").addClass("search-centering-js");
-            $(".search-form__button-clear").click();
+    $(".search-centering").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+        $(".search-centering").addClass("search-centering-js");
+        $('.search-form__input-js').val('');
     }
+    //if (!$(".burger-menu").is(e.target) && // если клик сделан не по элементу
+    //$(".main-navigation").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+    //    $(".main-navigation").addClass("main-navigation-js");
+    //}
 });
+

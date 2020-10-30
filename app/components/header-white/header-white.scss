@@ -1,0 +1,84 @@
+.main-logo-white {
+    color: black;
+}
+.main-header-white {
+    background-color: white;
+}
+.still-centering-white {
+    border: 1px solid #e3e3e3;
+}
+.still-list-white::before {
+    border-bottom: 15px solid #000;
+}
+.navigation-white {
+    .navigation__link-white {
+        color: black;
+    }
+    .navigation__link-white:hover {
+        background-color: 333333;
+        transition: 0.3s;
+        color: white;
+    }
+}
+.still-white::after {
+    background-image: url(../assets/images/V-black.svg);
+}
+.still-white:hover::after {
+    background-image: url(../assets/images/V-white.svg);
+}
+.personal-account__name-white {
+    color: black;
+}
+.personal-account-white::before {
+    background-image: url(../assets/images/user-white.png);
+    background-position: 50% 50%;
+}
+.drop-menu-account-white {
+    border: 1px solid #e3e3e3;
+}
+.drop-menu-account-white::before {
+    border-bottom: 15px solid #000;
+}
+.list-etc__elem-white {
+    .list-etc__link-white {
+        .svg-heart-white {
+            fill: black;
+        }
+
+        .svg-basket-white {
+            fill: black;
+        }
+
+        .svg-search-white {
+            fill: black;
+        }
+    }
+}
+.languages-white {
+    .languages__ru-white {
+        color: black;
+    }
+    .languages-list-white {
+    border: 1px solid #e3e3e3;
+    &::before {
+        border-bottom: 15px solid #000;
+    }
+}
+}
+@media (max-width: 1279px) {
+    .burger-menu-white {
+        background-color: black;
+        &::after,
+        &::before {
+            background-color: black;
+        }
+    }
+    .still-centering-white {
+        border: 0px;
+    }
+}
+@media (max-width: 767px) {
+    .drop-menu-account-white {
+        top: 40px;
+    }
+}
