@@ -13,6 +13,7 @@
     align-items: center;
     z-index: 2;
     padding-top: 4px;
+    z-index: 9999;
 }
 
 .main-header__centering {
@@ -536,7 +537,7 @@
                 position: absolute;
                 top: -29px;
                 left: 6vh;
-                margin-left: -15px;
+                margin-left: -5px;
                 border-top: 15px solid transparent;
                 border-left: 15px solid transparent;
                 border-right: 15px solid transparent;
@@ -745,6 +746,7 @@
     .still-list::before {
         display: none;
     }
+    
     .account-and-etc {
         width: 150px;
         padding-right: 15px;
@@ -806,12 +808,11 @@
         background-color: white;
         width: 277px;
         min-height: 393px;
-        top: 30px;
+        top: 39px;
         left: -150px;
-    }
-    
-    .drop-menu-account::before {
-        display: none;
+        &::before {
+            display: none;
+        }
     }
 
     .list-etc {

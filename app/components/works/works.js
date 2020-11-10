@@ -8,7 +8,9 @@ var msnry = new Masonry('.js-grid', {
     percentPosition: true
 });
 $(".sort-list-js").select2();
-
+$(".grid").imagesLoaded(function(){
+    msnry.layout();
+});
 
 
 $(".svg-basket").on("click", function() {

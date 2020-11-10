@@ -1,4 +1,4 @@
-var swiper = new Swiper('.styles-section .swiper-container', {
+var swiper2 = new Swiper('.styles-section .swiper-container', {
     slidesPerView: 2,
     spaceBetween: 44,
     navigation: {

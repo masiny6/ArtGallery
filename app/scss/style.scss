@@ -1,3 +1,7 @@
+@import "reset.scss";
+@import "swiper-bundle.scss";
+@import "select2.scss";
+@import "ion.rangeSlider.scss";
 @import "fonts.scss";
 @import "global.scss";
 @import "../components/header/header.scss";
@@ -8,3 +12,7 @@
 @import "../components/news/news.scss";
 @import "../components/footer/footer.scss";
 @import "../components/header-white/header-white.scss";
+@import "../components/title-catalog/title-catalog.scss";
+@import "../components/bread-crumb-catalog(mobile)/bread-crumb-catalog.scss";
+@import "../components/filter-catalog/filter-catalog.scss";
+@import "../components/popular-filter-catalog/popular-filter-catalog.scss";

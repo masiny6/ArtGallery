@@ -4,7 +4,7 @@ $(".news-section .swiper-button__next").on("click", function() {
 $(".news-section .swiper-button__prev").on("click", function() {
     $(".news-section .swiper-button-prev").click();
 });
-var swiper = new Swiper('.news-section .swiper-container', {
+var swiper3 = new Swiper('.news-section .swiper-container', {
     slidesPerView: 2,
     spaceBetween: 44,
     navigation: {

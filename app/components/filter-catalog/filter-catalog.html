@@ -1,0 +1,227 @@
+<div class="filter-catalog">
+    <div class="filter-mobile">
+        <span class="filter-mobile__button">Фильтр</span>
+    </div>
+    <form class="form-filter" action="">
+        <div class="centering">
+            <div class="main-filter">
+                <div class="filter-price">
+                    <div class="filter-price__conclusion">
+                        <input class="conclusion-min" id="conclusion-min-js" type="number">
+                        <span class="conclusion-line"></span>
+                        <input class="conclusion-max" id="conclusion-max-js" type="number">
+                    </div>
+                    <div class="filter-price__inner">
+                        <span class="filter-price__title">Цена</span>
+                        <input class="filter-price__range" id="range-price-js">
+                        <span class="filter-price__min">0</span>
+                        <span class="filter-price__max">max</span>
+                    </div>
+                </div>
+                <div class="filter-size">
+                    <span class="filter-size__title">Размер</span>
+                    <input class="filter-size__range" id="range-size-js">
+                </div>
+                <div class="filter-orientation">
+                    <span class="filter-orientation__title">Ориентация</span>
+                    <div class="filter-orientation__inner">
+                        <input class="filter-orientation__center" type="checkbox">
+                        <input class="filter-orientation__vertical" type="checkbox">
+                        <input class="filter-orientation__horizontal" type="checkbox">
+                    </div>
+                </div>
+                <div class="button-reset">
+                    <button class="button-reset__inner js-button-reset__inner" type="reset">Сбросить фильтр</button>
+                </div>
+            </div>
+        </div>
+        <div class="secondary-filter">
+            <div class="centering">
+                <div class="filter-tabs">
+                    <span class="filter-tabs__elem js-filter-tabs tab-author" data-tabs="author">Автор
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <span class="filter-tabs__elem tab-genre" data-tabs="genre">Жанр
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <span class="filter-tabs__elem tab-color" data-tabs="color">Цвет
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <span class="filter-tabs__elem tab-topic" data-tabs="topic">Тема
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <span class="filter-tabs__elem tab-material" data-tabs="material">Материал
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <span class="filter-tabs__elem tab-style" data-tabs="style">Стиль
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="show-pictures-mobile">
+                    <button class="show-pictures-mobile__button">Показать картины</button>
+                </div>
+            </div>
+            <div class="tab-author-inner js-tab-inner-active tab-inner" data-inner="author">
+                <div class="centering">
+                    <div class="centering-tablet">
+                        <span class="tab-author-inner__text">Начните вводить имя или фамилию автора</span>
+                        <select class="author-list author-list-js" name="select">
+                            <optgroup class="author-list__title" label="А">
+                                <option class="author-list__elem" value="Абулафия Крайнова">Абулафия Крайнова</option>
+                                <option class="author-list__elem" value="Арменинов Тримедул" selected>Арменинов Тримедул
+                                </option>
+                                <option class="author-list__elem" value="Ассадулин Нефедов">Ассадулин Нефедов</option>
+                                <option class="author-list__elem" value="Ашихмин Шадурахов">Ашихмин Шадурахов</option>
+                            </optgroup>
+                            <optgroup class="author-list__title" label="B">
+                                <option class="author-list__elem" value="Бабурин Константин">Бабурин Константин</option>
+                                <option class="author-list__elem" value="Бабуркин Вениамин">Бабуркин Вениамин</option>
+                                <option class="author-list__elem" value="Балутин Перламутр">Балутин Перламутр</option>
+                                <option class="author-list__elem" value="Бенвенист Трамп">Бенвенист Трамп</option>
+                                <option class="author-list__elem" value="Бердюгин Битюг">Бердюгин Битюг</option>
+                            </optgroup>
+                        </select>
+                        <div class="autocomplete__options js-autocomplete-options"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-genre-inner js-tab-inner-disabled tab-inner" data-inner="genre">
+                <div class="centering">
+                    <div class="centering-tablet">
+                        <label class="tab-inner-text" for="">Вортицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id="1"></label>
+                        <label class="tab-inner-text" for="">Модернизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Авангардизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Реализм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Барокко<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Конструктивизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Готика<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                        <label class="tab-inner-text" for="">Классицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Поп-арт<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Конструктивизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Готика<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                        <label class="tab-inner-text" for="">Классицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Поп-арт<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Натюрморт<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-color-inner js-tab-inner-disabled tab-inner" data-inner="color">
+                <div class="centering">
+                    <div class="centering-tablet">
+                        <label class="tab-inner-text" for="">Красный<input class="tab-inner-elem" type="checkbox"
+                                name="" id="1"></label>
+                        <label class="tab-inner-text" for="">Белый<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                        <label class="tab-inner-text" for="">Синий<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                        <label class="tab-inner-text" for="">Чёрный<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-topic-inner js-tab-inner-disabled tab-inner" data-inner="topic">
+                <div class="centering">
+                    <div class="centering-tablet">
+                        <label class="tab-inner-text" for="">Вортицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id="1"></label>
+                        <label class="tab-inner-text" for="">Модернизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Авангардизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Реализм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Барокко<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Конструктивизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Готика<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                        <label class="tab-inner-text" for="">Классицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-material-inner js-tab-inner-disabled tab-inner" data-inner="material">
+                <div class="centering">
+                    <div class="centering-tablet">
+                        <label class="tab-inner-text" for="">Сукно<input class="tab-inner-elem" type="checkbox" name=""
+                                id="1"></label>
+                        <label class="tab-inner-text" for="">Брезент<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Синтипон<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Велдшнепт<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-style-inner js-tab-inner-disabled tab-inner" data-inner="style">
+                <div class="centering">
+                    <div class="centering-tablet">
+                        <label class="tab-inner-text" for="">Вортицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id="1"></label>
+                        <label class="tab-inner-text" for="">Модернизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Авангардизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Реализм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Барокко<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Конструктивизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Готика<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                        <label class="tab-inner-text" for="">Классицизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Поп-арт<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Конструктивизм<input class="tab-inner-elem" type="checkbox"
+                                name="" id=""></label>
+                        <label class="tab-inner-text" for="">Готика<input class="tab-inner-elem" type="checkbox" name=""
+                                id=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="roll-up">Cвернуть фильтр</div>
+        </div>
+    </form>
+</div>
