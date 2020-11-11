@@ -21,7 +21,7 @@ var swiper4 = new Swiper('.popular-filter .swiper-container', {
         },
         1280: {
             slidesPerView: 5,
-            spaceBetween: 44
+            spaceBetween: 13
         }
     }
 });

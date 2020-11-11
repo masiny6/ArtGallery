@@ -35,6 +35,7 @@
             transition: 0.3s;
             box-shadow: inset 0px 0px 0px 4px #009999;
         }
+
         .filter-photo__inner {
             width: 100%;
             height: 100%;
@@ -78,16 +79,20 @@
         .centering {
             width: 95%;
         }
+
         .popular-filter__title {
             padding-left: 21px;
         }
+
         .filter-photo {
             width: 100%;
             height: 15vw;
         }
+
         .swiper-container {
             min-height: 25vw;
         }
+
         .swiper-button {
             position: absolute;
             display: flex;
@@ -104,7 +109,7 @@
 
             .swiper-button__prev:hover,
             .swiper-button__next:hover {
-                background-color: white;
+                background-color: transparent;
             }
 
             .swiper-button__prev:hover::before,
@@ -116,49 +121,77 @@
         }
     }
 }
+
 @media (max-width: 767px) {
-   .popular-filter {
-    .centering {
-        width: 100%;/**/
-    }
-    .popular-filter__header {
-        min-height: 22px;/**/
-        border-bottom: 1px solid #cccccc;/**/
-        position: relative;/**/
-        margin-bottom: 10px;
-        &::before {/**/
-            content: "";
-            position: absolute;
-            width: 40px;
-            height: 1px;
-            background-color: black;
-            bottom: -1px;
-            left: 50%;
-            margin-left: -2px;
-        }
-    }
-
-    .popular-filter__title {
-        font-family: "Proxima-Nova-Rg", sans-serif;/**/
-        font-weight: normal;/**/
-        font-size: 18px;/**/
-        padding-top: 34px;/**/
-        text-align: center;/**/
-        line-height: 26px;/**/
-    }
-
-    .swiper-button {
-        margin-top: -20px;
-        margin-left: 498px;
-    }
-
-    .swiper-button__prev,
-    .swiper-button__next {
-        border: 1px solid #cfcfcf;
-    }
-    .filter-photo {
+    .popular-filter {
+        .centering {
             width: 100%;
-            height: 15vw;
+            /**/
         }
-   }
+
+        .popular-filter__header {
+            min-height: 22px;
+            /**/
+            border-bottom: 1px solid #cccccc;
+            /**/
+            position: relative;
+            /**/
+            margin-bottom: 25px;
+
+            &::before {
+                /**/
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 1px;
+                background-color: black;
+                bottom: -1px;
+                left: 50%;
+                margin-left: -12px;
+            }
+        }
+
+        .popular-filter__title {
+            font-family: "Proxima-Nova-Rg", sans-serif;
+            /**/
+            font-weight: normal;
+            /**/
+            font-size: 18px;
+            /**/
+            padding-top: 34px;
+            /**/
+            text-align: center;
+            /**/
+            line-height: 26px;
+            padding-left: 0px;
+            /**/
+        }
+        .swiper-container {
+            margin-bottom: 25px;
+        }
+        .swiper-button {
+            margin-top: 25vw;
+            margin-left: 0px;
+            left: 0px;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 10;
+        }
+        .swiper-button__prev,
+        .swiper-button__next {
+            border: 1px solid #cfcfcf;
+            background-color: transparent;
+        }
+
+        .filter-photo {
+            width: 76%;
+            height: 50vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .filter-text {
+            margin-left: 12vw;
+            margin-top: -1px;
+        }
+    }
 }

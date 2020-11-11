@@ -94,8 +94,8 @@ $('.author-list-js').on('change', function () {
         $options.append('<div class="autocomplete__item js-autocomplete-item">' + values[i] + '</div>');
     }
 });
-
 $(document).on('click', '.js-autocomplete-item', function () {
+    console.log("124");
     var $select = $(this).closest('.tab-author-inner').find('.author-list-js');
     var text = $(this).text();
     var currentValues = $select.val();
