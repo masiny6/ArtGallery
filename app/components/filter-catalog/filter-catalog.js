@@ -70,7 +70,12 @@ $("#range-size-js").ionRangeSlider({
     to: 740,
     step: 250
 });
+// var attr = $("#range-size-js").attr("data-size-1");
+// console.log(attr);
+// // $(".irs-grid-text").each(function (index, element) {
 
+// //     // $(element).text();
+// // });
 $(".js-grid-text-0").text("S");
 $(".js-grid-text-1").text("M");
 $(".js-grid-text-2").text("L");

@@ -80,6 +80,14 @@
         border: 0px;
         outline: 0;
     }
+
+}
+.sort .select2-container--open .select2-results__option:hover {
+    background-color: rgba(209, 203, 203, 0.5) !important;
+
+}
+.select2-results__options--nested .select2-results__option:hover {
+    background-color: rgba(209, 203, 203, 0.5) !important;
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
@@ -96,9 +104,7 @@
     font-family: "Proxima-Nova-Rg", sans-serif;
 }
 
-.select2-results__option:hover {
-    background-color: rgba(209, 203, 203, 0.5);
-}
+
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: transparent;
     background-image: url(../assets/images/V-black.svg);
@@ -565,7 +571,7 @@
     .grid__sizer,
     .grid__item,
     .static-item {
-        width: calc((100% - 30px) / 2);
+        width: calc((100% - 7px) / 2);
     }
 
     .grid__gutter {
