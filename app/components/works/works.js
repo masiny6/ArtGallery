@@ -7,7 +7,9 @@ var msnry = new Masonry('.js-grid', {
     stamp: '.js-static-item',
     percentPosition: true
 });
-$(".sort-list-js").select2();
+$(".sort-list-js").select2({
+        dropdownPosition: 'below'
+});
 $(".grid").imagesLoaded(function(){
     msnry.layout();
 });

@@ -2,6 +2,7 @@
 @@include("swiper-bundle.min.js")
 @@include("masonry.js")
 @@include("select2.js")
+@@include("fix-select.js")
 @@include("imagesLoaded.js")
 @@include("ion.rangeSlider.js")
 @@include("../components/header/header.js")
