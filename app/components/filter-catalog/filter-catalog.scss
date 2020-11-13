@@ -1,4 +1,7 @@
 .filter-catalog {
+    .js-hidden-select {
+        display: none !important;
+    }
     .filter-mobile {
         display: none;
     }
@@ -450,7 +453,7 @@
 
         .tab-inner-text {
             font-size: 16px;
-            line-height: 46px;
+            display: inline-block;
             background-color: white;
             padding-left: 15px;
             padding-right: 15px;
@@ -461,6 +464,11 @@
             margin-right: 12px;
             cursor: pointer;
             transition: 0.3s;
+            margin-bottom: 18px;
+            &:hover {
+                border: 1px solid gray;
+                transition: 0.3s;
+            }
         }
 
         .js-tab-inner-text {
@@ -472,6 +480,7 @@
 
         .tab-inner-elem {
             appearance: none;
+            position: absolute;
         }
     }
 
@@ -507,7 +516,6 @@
 
         &:hover {
             border: 1px solid black;
-            transition: 0.3s;
         }
     }
 
@@ -624,7 +632,7 @@
         background-position: 16px;
         min-height: 54px;
         position: relative;
-
+        
         .filter-mobile {
             font-family: "Proxima-Nova-Lt", sans-serif;
             font-weight: 600;
@@ -635,18 +643,26 @@
             background-position: 16px center;
             .tab-arrow {
                 width: 10px;
-                right: 0;top: 5px;
+                right: 19px;
+                top: 18px;
                 position: absolute;
             }
+            .js-tab-arrow {
+                transform: rotate(180deg);
+            }
         }
-
+        .tab-inner:not(.tab-author-inner) {
+            background-color: white;
+            .centering {
+                padding-top: 15px;
+            }
+        }
+        .tab-inner .centering {
+            margin-bottom: 0px;
+        }
         .filter-mobile__button {
             padding-left: 58px;
             line-height: 54px;
-            // background-image: url(../assets/images/V-black.svg);
-            // background-repeat: no-repeat;
-            // background-position: right center;
-            // margin-right: 19px;
             display: block;
         }
 
@@ -780,21 +796,23 @@
                 
 
                 .tab-inner {
-                    margin-bottom: 17px;
+                    margin-bottom: 0px;
                     border-bottom: 0px;
-
                     &-text {
                         font-family: "Proxima-Nova-Lt", sans-serif;
                         font-weight: 600;
                         font-size: 12px;
-                        line-height: 34px;
                         padding-left: 13px;
                         padding-right: 13px;
                         padding-bottom: 3px;
                         padding-top: 3px;
+                        margin-bottom: 13px;
                     }
                 }
-
+                
+            .js-tab-inner-border {
+                border-bottom: 1px solid #c2c2c2 !important;
+            }
             .filter-tabs__elem {
                 font-family: "Proxima-Nova-Lt", sans-serif;
                 font-weight: 600;
@@ -810,6 +828,9 @@
                     display: none;
                 }
             }
+            .js-filter-tabs-border {
+                border-bottom: 0px;
+            }
             .tab-author  {
                 border-top: 1px solid #c2c2c2;
             }
@@ -820,10 +841,26 @@
                 }
 
                 .select2 {
-                    width: 285px !important;
+                    width: 88% !important;
+                }
+                .autocomplete__item {
+                    font-family: "Proxima-Nova-Lt", sans-serif;
+                    font-weight: 600;
+                    font-size: 12px;
+                    padding-left: 7px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    border-radius: 3px;
+                    margin-right: 10px;
+                    padding-right: 25px;
+                    margin-bottom: 15px;
+                }
+        
+                .autocomplete__options {
+                    margin-top: 32px;
+                    margin-bottom: 0px;
                 }
             }
-
             .show-pictures-mobile {
                 display: block;
                 width: 200px;

@@ -5,6 +5,7 @@
 @@include("fix-select.js")
 @@include("imagesLoaded.js")
 @@include("ion.rangeSlider.js")
+@@include("lax.js")
 @@include("../components/header/header.js")
 @@include("../components/slider/slider.js")
 @@include("../components/beginner/beginner.js")
@@ -17,3 +18,4 @@
 @@include("../components/bread-crumb-catalog(mobile)/bread-crumb-catalog.js")
 @@include("../components/filter-catalog/filter-catalog.js")
 @@include("../components/popular-filter-catalog/popular-filter-catalog.js")
+@@include("../components/product-card-catalog/product-card-catalog.js")
