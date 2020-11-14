@@ -1,76 +1,85 @@
 <div class="product-card">
     <div class="bread-crumb">
         <div class="centering">
-            <span class="bread-crumb__back">Назад</span>
-            <span class="bread-crumb__elem">Главная</span>
-            <span class="bread-crumb__elem">Каталог</span>
-            <span class="bread-crumb__elem">Название картины</span>
+            <a class="bread-crumb__link" href="catalog.html"><span
+                    class="bread-crumb__elem bread-crumb__back">Назад</span></a>
+            <a class="bread-crumb__link" href="index.html"><span class="bread-crumb__elem">Главная</span></a>
+            <a class="bread-crumb__link" href="catalog.html"><span class="bread-crumb__elem">Каталог</span></a>
+            <span class="bread-crumb__elem bread-crumb__last">Название картины</span>
         </div>
     </div>
     <div class="product-card__main">
-        <div class="photo-section">
-            <div class="photo-section__sliders">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+        <div class="centering">
+            <div class="photo-section">
+                <div class="photo-section__sliders">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
-                    <div class="swiper-scrollbar"></div>
-                </div>
-                <!--  -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
+                    <!--  -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">Slide 1</div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="under-photo">
+                    <span class="under-photo__like">Понравилось(<span class="under-photo__count">456</span>)</span>
+                    <span class="under-photo__copy"><a download="" href="../assets/images/news-photo-1.jpg">Цифровая
+                            копия</a></span>
+                    <span class="under-photo__not-show">Больше не показывать картину</span>
                 </div>
             </div>
-            <div class="under-photo">
-                <span class="under-photo__like">Понравилось(<span class="under-photo__count">456</span>)</span>
-                <span class="under-photo__copy"><a download="" href="../assets/images/news-photo-1.jpg">Цифровая копия</a></span>
-                <span class="under-photo__not-show">Больше не показывать картину</span>
-            </div>
-        </div>
-        <div class="text-section">
-            <h1 class="text-section__title">распоряжение о структуре очень длинное название картины</h1>
-            <div class="artile-and-favorites">
-                <span class="article">Арт. HWV-133423</span>
-                <span class="favorites">В избранное</span>
-            </div>
-            <div class="size-and-style">
-                <span class="size-picture">Размер картины: <span class="size-picture__inner">100 x 120 x 4 см</span></span>
-                <span class="style-picture"><a class="style-picture__link" href="#">Пейзаж</a></span>
-            </div>
-            <div class="price-and-basket">
-                <div class="price">
-                    <span class="price__real">927 750 р</span>
-                    <span class="price__old">727 750</span>
+            <div class="text-section">
+                <h1 class="text-section__title">Распоряжение о структуре очень длинное название картины</h1>
+                <div class="artile-and-favorites">
+                    <span class="article">Арт. HWV-133423</span>
+                    <span class="favorites">
+                        <svg class="svg-heart" viewBox="0 0 21.6 19.1"><path d="M10.8 3.7c5.5-6.8 12.6 1.4 8.7 5.7l-8.8 8.8L2 9.4C-1.5 5 5.3-3.2 10.8 3.7z"></path></svg>
+                        В избранное</span>
                 </div>
-                <div class="basket">
-                    <button class="basket__button">Добавить в корзину</button>
+                <div class="author">
+                    <a class="author__elem" href="#">Диана Миллер</a>
                 </div>
-            </div>
-            <div class="social-network">
-                <ul class="solial-list">
-                    <li class="solial-list__elem"><a class="social-list__link" href="#">vk</a></li>
-                    <li class="solial-list__elem"><a class="social-list__link" href="#">facebook</a></li>
-                    <li class="solial-list__elem"><a class="social-list__link" href="#">ok</a></li>
-                    <li class="solial-list__elem"><a class="social-list__link" href="#">mail</a></li>
-                </ul>
-            </div>
-            <div class="parameters-picture">
-                <span class="parameters-picture__button">Параметры картины
-                    <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
-                        <path
-                            d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
-                            fill="#000000" />
-                    </svg>
-                </span>
-                <table class="parameters-table">
+                <div class="size-and-style">
+                    <span class="size-picture">Размер картины: <span class="size-picture__inner">100 x 120 x 4
+                            см</span></span>
+                    <span class="style-picture"><a class="style-picture__link" href="#">Пейзаж</a></span>
+                </div>
+                <div class="price-and-basket">
+                    <div class="price">
+                        <span class="price__real">927 750 <span class="ruble">₽</span></span>
+                        <span class="price__old">727 750</span>
+                    </div>
+                    <div class="basket">
+                        <button class="basket__button">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="social-network">
+                    <ul class="solial-list">
+                        <li class="solial-list__elem"><a class="social-list__link" href="#">vk</a></li>
+                        <li class="solial-list__elem"><a class="social-list__link" href="#">facebook</a></li>
+                        <li class="solial-list__elem"><a class="social-list__link" href="#">ok</a></li>
+                        <li class="solial-list__elem"><a class="social-list__link" href="#">mail</a></li>
+                    </ul>
+                </div>
+                <div class="parameters-picture">
+                    <span class="parameters-picture__button">Параметры картины
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <table class="parameters-table">
                         <tr class="parameters-table__line">
                             <td class="parameters-table__column-one">Год написания</td>
                             <td class="parameters-table__column-two">2008</td>
@@ -87,18 +96,21 @@
                             <td class="parameters-table__column-one">Материалы</td>
                             <td class="parameters-table__column-two">Уголь, Чернила, Пастель</td>
                         </tr>
-                </table>
-            </div>
-            <div class="description-picture">
-                <span class="description-picture__button">Описание картины
-                    <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
-                        <path
-                            d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
-                            fill="#000000" />
-                    </svg>
-                </span>
-                <div class="description-picture__text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nulla eius doloribus distinctio reprehenderit, rerum suscipit pariatur, iste quo, voluptatum sequi aut similique ad ab. Quasi tempora laboriosam possimus temporibus!
+                    </table>
+                </div>
+                <div class="description-picture">
+                    <span class="description-picture__button">Описание картины
+                        <svg class="tab-arrow" viewBox="0 0 11 7" fil="#000">
+                            <path
+                                d="M0.55 1.5L1.96 0.09L6.91 5.03L5.5 6.45L0.55 1.5ZM4.09 5.03L9.04 0.09L10.45 1.5L5.5 6.45L4.09 5.03Z"
+                                fill="#000000" />
+                        </svg>
+                    </span>
+                    <div class="description-picture__text">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda nulla eius doloribus
+                        distinctio reprehenderit, rerum suscipit pariatur, iste quo, voluptatum sequi aut similique ad
+                        ab. Quasi tempora laboriosam possimus temporibus!
+                    </div>
                 </div>
             </div>
         </div>
