@@ -72,6 +72,19 @@
 
         .photo-section {
             width: 644px;
+
+            &__sliders {
+                display: flex;
+                justify-content: space-between;
+                height: 380px;
+                .swiper-container {
+                    border: 1px solid red;
+                }
+                .swiper-container-one {
+                    width: 81px;
+                    margin-right: 10px;
+                }
+            }
         }
 
         .text-section {
@@ -90,7 +103,7 @@
                 padding-left: 45px;
                 display: flex;
                 justify-content: space-between;
-                margin-top: 30px;
+                margin-top: 35px;
 
                 .article,
                 .favorites {
@@ -105,20 +118,20 @@
 
                 .favorites {
                     position: relative;
-                    
+
                     transition: 0.3s;
 
                     &:hover {
                         color: #009999;
                         cursor: pointer;
-                        
+
                         transition: 0.3s;
-                        
+
 
                         .svg-heart {
                             stroke: #009999;
-                            
-                        transition: 0.3s;
+
+                            transition: 0.3s;
                         }
                     }
 
@@ -177,14 +190,14 @@
                         color: black;
                         text-decoration: none;
                         border-bottom: 1px solid #c3c3c3;
-                        
+
                         transition: 0.3s;
 
                         &:hover {
                             border-bottom: 1px solid #bcdcdc;
                             color: #009999;
-                            
-                        transition: 0.3s;
+
+                            transition: 0.3s;
                         }
                     }
                 }
@@ -193,7 +206,7 @@
             .price-and-basket {
                 display: flex;
                 padding-left: 45px;
-                margin-top: 27px;
+                padding-top: 27px;
 
                 .price {
                     display: flex;
@@ -204,33 +217,37 @@
                         font-family: "Proxima-Nove-Rg", sans-serif;
                         font-weight: normal;
                         color: #2e3237;
-                        font-size: 24px;
-                        margin-bottom: 17px;
+                        font-size: 30px;
+                        margin-bottom: 10px;
+                        padding-top: 20px;
 
                         .ruble {
                             font-size: 18px;
                         }
 
-                        &__old {
-                            font-family: "Proxima-Nova-Rg", sans-serif;
-                            font-size: 19px;
-                            font-weight: normal;
-                            color: #666666;
-                            text-decoration: line-through;
-                        }
+
+                    }
+
+                    &__old {
+                        font-family: "Proxima-Nova-Rg", sans-serif;
+                        font-size: 19px;
+                        font-weight: normal;
+                        color: #666666;
+                        text-decoration: line-through;
                     }
                 }
 
-                .basket {
+                .basket__inner {
                     width: 384px;
                     border: 3px solid #009999;
-                    
                     transition: 0.3s;
+
                     &:hover {
                         border: 3px solid #26a9a9;
                         transition: 0.3s;
                     }
-                    &__button {
+
+                    .basket__button {
                         font-family: "Proxima-Nova-Lt", sans-serif;
                         font-weight: 600;
                         font-size: 16px;
@@ -242,17 +259,169 @@
                         background-color: #009999;
                         width: 100%;
 
-                        
-                    height: 51px;
-                    
-                    transition: 0.3s;
-                    &:hover {
-                        outline: 1px solid #c2e7e7;
-                        background-color: #26a9a9;
-                        
+
+                        height: 51px;
+
                         transition: 0.3s;
+
+                        &:hover {
+                            outline: 1px solid #c2e7e7;
+                            background-color: #26a9a9;
+                            cursor: pointer;
+                            transition: 0.3s;
+                        }
                     }
+                }
+            }
+
+            .social-network {
+                width: 550px;
+                margin-left: auto;
+                min-height: 40px;
+                margin-top: 13px;
+                padding-bottom: 20px;
+                display: block;
+
+                .social-list {
+                    display: flex;
+                    float: right;
+                    width: 184px;
+                    justify-content: space-between;
+
+                    &__elem {
+                        border: 1px solid #cdcdcd;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        position: relative;
+                        transition: 0.3s;
+
+                        &:hover {
+                            background-color: #333333;
+                            border: 1px solid transparent;
+                            transition: 0.3s;
+                            cursor: pointer;
+
+                            .svg-vk,
+                            .svg-mail,
+                            .svg-ok,
+                            .svg-facebook {
+                                fill: white;
+                                transition: 0.3s;
+                            }
+                        }
                     }
+
+                    .svg-vk,
+                    .svg-mail,
+                    .svg-ok,
+                    .svg-facebook {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        width: 23px;
+                        height: 20px;
+                        fill: #666666;
+                        transition: 0.3s;
+
+                    }
+
+                    .svg-mail {
+                        width: 17px;
+                    }
+                }
+            }
+
+            .parameters-picture {
+                padding-left: 45px;
+                margin-bottom: 14px;
+
+                .parameters-picture__button {
+                    font-size: 18px;
+                    position: relative;
+                    display: block;
+                    font-family: "Proxima-Nova_Rg", sans-serif;
+                    font-weight: normal;
+
+                    padding-top: 17px;
+                    border-top: 1px solid #c2c2c2;
+                    margin-bottom: 21px;
+
+                    .tab-arrow {
+                        width: 10px;
+                        height: 6px;
+                        position: absolute;
+                        right: 14px;
+                        top: 20px;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .parameters-table {
+                    width: 100%;
+
+                    .parameters-table__line:nth-child(odd) {
+                        background-color: #f7f7f7;
+                    }
+
+                    .parameters-table__column {
+                        vertical-align: auto;
+                        padding-top: 9px;
+                        padding-bottom: 9px;
+                        font-size: 15px;
+                        font-family: "Proxima-Nova_Rg", sans-serif;
+                        font-weight: normal;
+                    }
+
+                    .parameters-table__column-one {
+                        width: 182px;
+                        padding-left: 11px;
+                    }
+
+                    .parameters-table__column-two {
+                        width: 357px;
+                    }
+                }
+
+            }
+
+            .description-picture {
+                width: 550px;
+                display: block;
+                margin-left: auto;
+                border-bottom: 1px solid #c2c2c2;
+                padding-bottom: 25px;
+                margin-bottom: 70px;
+
+                &__button {
+                    font-size: 18px;
+                    position: relative;
+                    border-top: 1px solid #c2c2c2;
+                    padding-top: 15px;
+                    display: block;
+                    font-family: "Proxima-Nova_Rg", sans-serif;
+                    font-weight: normal;
+
+                    .tab-arrow {
+                        width: 10px;
+                        height: 6px;
+                        position: absolute;
+                        right: 14px;
+                        top: 20px;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                &__text {
+                    font-family: "Proxima-Nova_Rg", sans-serif;
+                    font-weight: normal;
+                    margin-top: 42px;
+                    padding-left: 11px;
+                    font-size: 16px;
+                    line-height: 27px;
                 }
             }
         }
