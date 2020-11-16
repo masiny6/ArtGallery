@@ -65,6 +65,7 @@
 
     .product-card__main {
         padding-top: 45px;
+        min-height: 877px;
 
         .centering {
             display: flex;
@@ -76,13 +77,195 @@
             &__sliders {
                 display: flex;
                 justify-content: space-between;
-                height: 380px;
+
                 .swiper-container {
-                    border: 1px solid red;
+                    max-height: 521px;
+                    margin-left: 0;
+                    margin-right: 0;
                 }
+
                 .swiper-container-one {
                     width: 81px;
-                    margin-right: 10px;
+                    
+
+                    .swiper-slide {
+                        width: 79px;
+                        height: 81px;
+                        border: 1px solid transparent;
+                    }
+
+                    .photo-section__elem {
+                        width: 100%;
+                        height: 100%;
+
+                    }
+
+                    .swiper-slide-thumb-active {
+                        border: 1px solid black;
+                    }
+                }
+
+                .swiper-container-two {
+                    width: 553px;
+                    position: relative;
+                    // .swiper-button-next {
+                    //     left: 30px ;
+                    // }
+                    // .swiper-button-prev {
+                    //     left: 10px ;
+                    // }
+                    .swiper-button-product {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        z-index: 3;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-bottom: 29px;
+                        .swiper-button_prev {
+                            width: 45px;
+                            height: 25px;
+                            position: relative;
+                            padding-right: 24px;
+                            top: -2px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                            .svg-arrow {
+                                fill: white;
+                                transform: rotate(180deg);
+                                width: 45px;
+                                height: 13px;
+                            }
+                        }
+                        .swiper-button_next {
+                            width: 45px;
+                            height: 25px;
+                            position: relative;
+                            padding-right: 30px;
+                            top: 1px;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                            .svg-arrow {
+                                fill: white;
+                                width: 45px;
+                                height: 13px;
+                                
+                            }
+                        }
+                    }
+
+                    .photo-section__elem {
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+            }
+
+            .under-photo {
+                width: 553px;
+                margin-left: auto;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 42px;
+                font-size: 15px;
+
+                &__like {
+                    position: relative;
+                    padding-left: 44px;
+
+                    .svg-like {
+                        width: 24px;
+                        height: 23px;
+                        position: absolute;
+                        left: 0;
+                        top: -6px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        transition: 0.3s;
+                        color: #009999;
+                        
+                        .svg-like {
+                            fill: #009999;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                &__copy {
+                    position: relative;
+                    padding-left: 39px;
+                    padding-right: 5px;
+                    .under-photo__link {
+                        text-decoration: none;
+                        color: black;
+                        transition: 0.3s;
+                    }
+
+                    .svg-download {
+                        width: 21px;
+                        height: 21px;
+                        position: absolute;
+                        left: 0;
+                        top: -1px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        transition: 0.3s;
+                        .under-photo__link {
+                        color: #009999;
+                        }
+                        
+                        .svg-download {
+                            fill: #009999;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                &__not-show {
+                    flex-basis: 100%;
+                    margin-top: 50px;
+                    position: relative;
+                    padding-left: 41px;
+
+                    .svg-show {
+                        width: 27px;
+                        height: 17px;
+                        position: absolute;
+                        left: 0px;
+                        top: -1px;
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 27px;
+                        height: 2px;
+                        transform: rotate(-45deg);
+                        background-color: black;
+                        top: 6px;
+                        left: 0px;
+                    }
+                    &:hover {
+                        color: #009999;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        .svg-show {
+                            fill: #009999;
+                            transition: 0.3s;
+                        }
+    
+                        &:before {
+                            background-color: #009999;
+                            transition: 0.3s;
+                        }
+                    }
                 }
             }
         }
@@ -346,9 +529,12 @@
                     font-family: "Proxima-Nova_Rg", sans-serif;
                     font-weight: normal;
 
-                    padding-top: 17px;
+                    padding-top: 15px;
                     border-top: 1px solid #c2c2c2;
                     margin-bottom: 21px;
+                    &:hover {
+                        cursor: pointer;
+                    }
 
                     .tab-arrow {
                         width: 10px;
@@ -358,6 +544,13 @@
                         top: 20px;
                         transform: rotate(180deg);
                     }
+                    .js-tab-arrow {
+                        transform: rotate(0deg);
+                    }
+                    
+                }
+                .js-parameters-picture__button {
+                    margin-bottom: 15px;
                 }
 
                 .parameters-table {
@@ -385,7 +578,9 @@
                         width: 357px;
                     }
                 }
-
+                .js-parameters-table {
+                    display: none;
+                }
             }
 
             .description-picture {
@@ -393,7 +588,7 @@
                 display: block;
                 margin-left: auto;
                 border-bottom: 1px solid #c2c2c2;
-                padding-bottom: 25px;
+                padding-bottom: 15px;
                 margin-bottom: 70px;
 
                 &__button {
@@ -404,6 +599,9 @@
                     display: block;
                     font-family: "Proxima-Nova_Rg", sans-serif;
                     font-weight: normal;
+                    &:hover {
+                        cursor: pointer;
+                    }
 
                     .tab-arrow {
                         width: 10px;
@@ -412,6 +610,9 @@
                         right: 14px;
                         top: 20px;
                         transform: rotate(180deg);
+                    }
+                    .js-tab-arrow {
+                        transform: rotate(0deg);
                     }
                 }
 
@@ -422,6 +623,9 @@
                     padding-left: 11px;
                     font-size: 16px;
                     line-height: 27px;
+                }
+                .js-description-picture__text {
+                    display: none;
                 }
             }
         }
