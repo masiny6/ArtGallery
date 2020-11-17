@@ -6,7 +6,17 @@ var swiperProduct = new Swiper('.product-card .swiper-container-one', {
     // loop: true,
     direction: "vertical",
     slidesPerView: 6,
-    spaceBetween: 10
+    spaceBetween: 10,
+    breakpoints: {
+        320: {
+            slidesPerView: 4,
+            spaceBetween: 15
+        },
+        768: {
+            slidesPerView: 5,
+            spaceBetween: 14
+        }
+    },
 });
 var swiper = new Swiper('.product-card .swiper-container-two', {
     navigation: {
@@ -33,3 +43,11 @@ $(".description-picture__button").on("click", function() {
     $(".description-picture .tab-arrow").toggleClass("js-tab-arrow");
     $(".description-picture__text").toggleClass("js-description-picture__text");
 });
+$( window ).resize(function() {
+    if ($(window).width() <= "1279") {
+        $(".basket__button").text("В корзину");
+    }
+});
+  if ($(window).width() <= "1279") {
+    $(".basket__button").text("В корзину");
+}
