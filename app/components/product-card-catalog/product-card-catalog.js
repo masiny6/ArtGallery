@@ -15,6 +15,10 @@ var swiperProduct = new Swiper('.product-card .swiper-container-one', {
         768: {
             slidesPerView: 5,
             spaceBetween: 14
+        },
+        1280: {
+            slidesPerView: 6,
+            spaceBetween: 10
         }
     },
 });
@@ -42,6 +46,8 @@ $(".parameters-picture__button").on("click", function() {
 $(".description-picture__button").on("click", function() {
     $(".description-picture .tab-arrow").toggleClass("js-tab-arrow");
     $(".description-picture__text").toggleClass("js-description-picture__text");
+    $(".description-picture__button").toggleClass("js-description-picture__button");
+    
 });
 $( window ).resize(function() {
     if ($(window).width() <= "1279") {
@@ -51,3 +57,8 @@ $( window ).resize(function() {
   if ($(window).width() <= "1279") {
     $(".basket__button").text("В корзину");
 }
+//16 14
+$(".favorites").on("click", function() {
+    $(".svg-heart").toggleClass("js-svg-heart");
+    $(this).toggleClass("js-favorites");
+})
