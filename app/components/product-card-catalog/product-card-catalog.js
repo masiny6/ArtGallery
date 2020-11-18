@@ -10,7 +10,8 @@ var swiperProduct = new Swiper('.product-card .swiper-container-one', {
     breakpoints: {
         320: {
             slidesPerView: 4,
-            spaceBetween: 15
+            spaceBetween: 15,
+            direction: "horizontal",
         },
         768: {
             slidesPerView: 5,
@@ -42,6 +43,7 @@ $(".parameters-picture__button").on("click", function() {
     $(".parameters-picture .tab-arrow").toggleClass("js-tab-arrow");
     $(".parameters-table").toggleClass("js-parameters-table");
     $(".parameters-picture__button").toggleClass("js-parameters-picture__button");
+    $(".parameters-picture").toggleClass("js-parameters-picture");
 });
 $(".description-picture__button").on("click", function() {
     $(".description-picture .tab-arrow").toggleClass("js-tab-arrow");
