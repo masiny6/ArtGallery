@@ -19,3 +19,4 @@
 @@include("../components/filter-catalog/filter-catalog.js")
 @@include("../components/popular-filter-catalog/popular-filter-catalog.js")
 @@include("../components/product-card-catalog/product-card-catalog.js")
+@@include("../components/works-card/works-card.js")
