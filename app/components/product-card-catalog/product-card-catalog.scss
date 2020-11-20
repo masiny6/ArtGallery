@@ -94,7 +94,7 @@
                 justify-content: space-between;
 
                 .swiper-container {
-                    max-height: 521px;
+                    // max-height: 521px;
                     margin-left: 0;
                     margin-right: 0;
                 }
@@ -175,8 +175,41 @@
 
                     .photo-section__elem {
                         width: 100%;
-                        height: 100%;
+                        // height: 100%;
 
+                    }
+                    .increase-button {
+                        position: absolute;
+                        width: 50px;
+                        height: 40px;
+                        top: 15px;
+                        right: 0;
+                        z-index: 3;
+                        display: flex;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        &:hover {
+                            .svg-increase_down,
+                            .svg-increase_up {
+                                opacity: 0.7;
+                                transition: 0.3s;
+                            }
+                        }
+                        .increase-button__down {
+                            padding-top: 25px;
+                            margin-right: -5px;
+                        }
+                        .svg-increase_down {
+                            width: 20px;
+                            height: 20px;
+                            fill: white;
+                        }
+                        .svg-increase_up {
+                            width: 20px;
+                            height: 20px;
+                            fill: white;
+                            transform: rotate(-180deg);
+                        }
                     }
                 }
             }
@@ -677,10 +710,77 @@
             }
         }
     }
-}
+    .popup-photo {
+        position: fixed;
+        top: 0;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        .popup-photo__close {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            z-index: 10;
+            &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 50px;
+            top: 30px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: white;
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        }
+        
+        .swiper-container {
+            margin-top: 3%;
+            width: 100%;
+            height: 100%;
+            .swiper-slide {
+                height: 100%;
+            }
+        }
+        
+         .swiper-button-prev {
+             left: 10px;
+         }
+         .swiper-button-next {
+            left: 97%;
+         }
+        .photo-section__elem {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 88%;
+        }
+    }
+    .js-popup-photo {
+        display: none;
 
+    }
+
+}
+.js-product-card-main {
+    overflow: hidden;
+}
 @media (max-width: 1279px) {
     .product-card {
+        .popup-photo {
+             .swiper-button-next {
+                left: 95vw;
+             }
+        }
         .desktop-hidden {
             display: block;
         }
@@ -848,6 +948,26 @@
 
 @media (max-width: 767px) {
     .product-card {
+        .popup-photo {
+            .swiper-button-next {
+               left: 94vw;
+            }
+            .photo-section__elem {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height: 40%;
+            }
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+            }
+            @media (max-width: 500px) {
+                .swiper-button-next {
+                    left: 90vw;
+                }
+            }
+       }
         padding-top: 56px; //
 
         .bread-crumb {
@@ -895,7 +1015,7 @@
                         }
 
                         .swiper-slide {
-                            width: 98%;
+                            width: 15% !important;
                             height: auto;
                         }
                     }

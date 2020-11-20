@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link rel="stylesheet" href="css/style.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ArtGallery</title>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="main">
     @@include('components/header/header.html')
@@ -14,6 +15,9 @@
     @@include("components/styles/styles.html")
     @@include("components/news/news.html")
     @@include("components/footer/footer.html")
-    <script src="js/script.js"></script>
+    @@include("components/popup-authorization/popup-authorization.html");
+    @@include("components/popup-password-recovery/popup-password-recovery.html");
+    @@include("components/popup-registration/popup-registration.html");
+    @@include("components/popup-success/popup-success.html");
   </body>
 </html>
