@@ -1,0 +1,386 @@
+.popup-registration {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .popup-registration__centering {
+        width: 858px;
+        height: 656px;
+        background-color: white;
+        position: relative;
+
+        .popup-registration__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 5px;
+                top: 8px;
+                left: 1px;
+                background-color: black;
+            }
+
+            &::after {
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+        }
+
+        .popup-header {
+            padding-top: 51px;
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 23px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 1px;
+                background-color: black;
+                bottom: -1px;
+                left: 0;
+            }
+
+            .popup-header__title {
+                font-family: "Proxima-Nova-Lt", sans-serif;
+                font-weight: 300;
+                font-size: 36px;
+                line-height: 42px;
+                padding-bottom: 12px;
+                display: block;
+            }
+
+            .popup-header__text {
+                display: block;
+                color: #656565;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            .no-account {
+                font-family: "Proxima-Nova-Rg", sans-serif;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 18px;
+                color: #656565;
+                display: flex;
+                align-items: flex-end;
+
+                .no-account__text {
+                    margin-right: 22px;
+                }
+
+                .no-account__registr {
+                    border-bottom: 2px dotted #2e3237;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        opacity: 0.5;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+
+        .artist-and-buyer {
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid #cccccc;
+            height: 57px;
+            align-items: center;
+
+            .input-general {
+                appearance: none;
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: 2px solid #009999;
+                left: -28px;
+                top: -3px;
+                outline: 0;
+                cursor: pointer;
+
+                &:checked::before {
+                    content: "";
+                    position: absolute;
+                    background-color: #009999;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+
+            .label-artist,
+            .label-buyer {
+                position: relative;
+            }
+            .label-artist {
+                margin-right: 50px;
+            }
+        }
+
+        .network-and-form {
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            margin-top: 22px;
+            .social-network {
+                padding-right: 45px;
+                border-right: 1px solid #cccccc;
+
+                .social-network__title {
+                    font-size: 17px;
+                    line-height: 18px;
+                }
+
+                .social-network__list {
+                    margin-top: 15px;
+                }
+
+                .social-network__elem {
+                    width: 251px;
+                    height: 39px;
+                    border: 1px solid #cccccc;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    transition: 0.3s;
+                    cursor: pointer;
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 48px;
+                    }
+
+                    &:hover {
+                        background-color: black;
+                        border: 1px solid black;
+                        transition: 0.3s;
+
+                        .social-network__link {
+                            color: white;
+
+                        }
+
+                        .svg-general {
+                            fill: white;
+                        }
+                    }
+
+                    .svg-general {
+                        position: absolute;
+                    }
+
+                    .svg-vk {
+                        width: 23px;
+                        height: 22px;
+                        top: 7px;
+                        left: 35px;
+                    }
+
+                    .svg-fb {
+                        width: 15px;
+                        height: 18px;
+                        top: 10px;
+                        left: 38px;
+                    }
+
+                    .svg-ok {
+                        width: 20px;
+                        height: 20px;
+                        top: 8px;
+                        left: 38px;
+                    }
+
+                    .svg-google {
+                        width: 28px;
+                        height: 28px;
+                        top: 5px;
+                        left: 38px;
+                    }
+
+                }
+
+                .social-network__ok {
+                    .social-network__link {
+                        padding-left: 30px;
+                    }
+                }
+
+                .social-network__link {
+                    font-size: 18px;
+                    line-height: 18px;
+                    color: black;
+                    text-decoration: none;
+                }
+
+            }
+
+            .section-form {
+                padding-left: 45px;
+                width: 100%;
+                .section-form__text {
+                    margin-bottom: 15px;
+                    display: block;
+                }
+                .name-and-family {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 10px;
+                    .label-name,
+                    .label-family {
+                        margin-bottom: 5px;
+                        cursor: pointer;
+                    }
+                    .input-name,
+                    .input-family {
+                        width: 195px;
+                        border-radius: 0px;
+                        border: 1px solid #cbcbcb;
+                        outline: 0;
+                        height: 39px;
+                        font-family: "Proxima-Nova-Rg", sans-serif;
+                        font-size: 17px;
+                        line-height: 18px;
+                    }
+                }
+                .fieldset-email {
+                    margin-bottom: 26px;
+                }
+
+                .fieldset-password {
+                    margin-bottom: 12px;
+                }
+
+                .label-email,
+                .label-password {
+                    font-size: 17px;
+                    line-height: 18px;
+                    padding-bottom: 3px;
+                }
+
+                .input-email,
+                .input-password {
+                    width: 98%;
+                    height: 39px;
+                    border-radius: 0;
+                    border: 1px solid #cbcbcb;
+                    outline: 0;
+                    font-family: "Proxima-Nova-Rg", sans-serif;
+                    font-size: 17px;
+                    line-height: 18px;
+                }
+                .user-agreement {
+                    .user-agreement__input {
+                        appearance: none;
+                        width: 15px;
+                        height: 15px;
+                        border: 2px solid #009999;
+                        outline: 0;
+                        position: relative;
+                        top: 5px;
+                        &:checked::before {
+                            content: "";
+                            position: absolute;
+                            background-image: url(../assets/images/tick.svg);
+                            background-repeat: no-repeat;
+                            width: 14px;
+                            height: 11px;
+                            top: -2px;
+                            left: 1px;
+                        }
+                    }
+                    .user-agreement__text {
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #656565;
+                    }
+                    .user-agreement__link {
+                        color: #656565;
+                        border-bottom: 2px dotted #2e3237;
+                        text-decoration: none;
+                        transition: 0.3s;
+                        &:hover {
+                            opacity: 0.5;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+                .button__inner {
+                    border: 3px solid #009999;
+                    transition: 0.3s;
+                    margin-top: 32px;
+
+                    &:hover {
+                        border: 3px solid #26a9a9;
+                        transition: 0.3s;
+                    }
+                    
+                    .button-authorization {
+                        font-family: "Proxima-Nova-Lt", sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: white;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        outline: 1px solid #9cd7d7;
+                        border: 0px;
+                        background-color: #009999;
+                        width: 100%;
+                        height: 51px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            outline: 1px solid #c2e7e7;
+                            background-color: #26a9a9;
+                            cursor: pointer;
+                            transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
