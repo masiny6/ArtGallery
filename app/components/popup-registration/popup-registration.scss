@@ -20,15 +20,15 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             cursor: pointer;
 
             &::after,
             &::before {
                 content: "";
                 position: absolute;
-                width: 18px;
+                width: 23px;
                 height: 5px;
                 top: 8px;
                 left: 1px;
@@ -46,9 +46,8 @@
 
         .popup-header {
             padding-top: 51px;
-            width: 768px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 40px;
+            margin-right: 40px;
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #cccccc;
@@ -108,9 +107,8 @@
         }
 
         .artist-and-buyer {
-            width: 768px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 40px;
+            margin-right: 40px;
             display: flex;
             justify-content: center;
             border-bottom: 1px solid #cccccc;
@@ -148,6 +146,10 @@
             .label-artist,
             .label-buyer {
                 position: relative;
+                font-family: "Proxima-Nova-Lt", sans-serif;
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 18px;
             }
             .label-artist {
                 margin-right: 50px;
@@ -155,9 +157,8 @@
         }
 
         .network-and-form {
-            width: 768px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 40px;
+            margin-right: 40px;
             display: flex;
             margin-top: 22px;
             .social-network {
@@ -263,6 +264,8 @@
                 .section-form__text {
                     margin-bottom: 15px;
                     display: block;
+                    font-size: 17px;
+                    line-height: 18px;
                 }
                 .name-and-family {
                     display: flex;
@@ -272,6 +275,10 @@
                     .label-family {
                         margin-bottom: 5px;
                         cursor: pointer;
+                        font-family: "Proxima-Nova-Rg", sans-serif;
+                        font-weight: normal;
+                        font-size: 17px;
+                        line-height: 18px;
                     }
                     .input-name,
                     .input-family {
@@ -357,7 +364,7 @@
                         transition: 0.3s;
                     }
                     
-                    .button-authorization {
+                    .button-registration {
                         font-family: "Proxima-Nova-Lt", sans-serif;
                         font-weight: 600;
                         font-size: 16px;
@@ -377,6 +384,180 @@
                             background-color: #26a9a9;
                             cursor: pointer;
                             transition: 0.3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1279px) {
+    .popup-registration {
+        .popup-registration__centering {
+            width: 652px;//
+            height: 574px;//
+    
+            .popup-registration__close {
+                top: 15px;//
+                right: 15px;//
+            }
+    
+            .popup-header {
+                padding-top: 45px;//
+                width: 574px;//
+            margin-left: auto;//
+            margin-right: auto;//
+                padding-bottom: 23px;//
+    
+    
+                .popup-header__title {
+                    font-size: 30px;//
+                    padding-bottom: 0px;//
+                }
+    
+                .popup-header__text {
+                    font-size: 12px;//
+                }
+    
+                .no-account {
+                    font-size: 12px;//
+                }
+            }
+            .artist-and-buyer {
+                width: 574px;//
+            margin-left: auto;//
+            margin-right: auto;//
+                height: 56px;//
+    
+                .label-artist,
+                .label-buyer {
+                    font-size: 14px;//
+                }
+                .label-artist {
+                    margin-right: 44px;//
+                }
+            }
+    
+            .network-and-form {
+                width: 574px;//
+            margin-left: auto;//
+            margin-right: auto;//
+                margin-top: 20px;//
+                /*social-network изменен*/
+                .social-network {
+                    padding-right: 40px;
+
+                    .social-network__title {
+                        font-size: 14px;
+                    }
+
+                    .social-network__list {
+                        margin-top: 10px;
+                    }
+
+                    .social-network__elem {
+                        width: 201px;
+                        height: 27px;
+
+                        &:last-child {
+                            margin-bottom: 38px;
+                        }
+
+                        .svg-vk {
+                            width: 18px;
+                            height: 19px;
+                            top: 4px;
+                            left: 35px;
+                        }
+
+                        .svg-fb {
+                            width: 15px;
+                            height: 15px;
+                            top: 6px;
+                            left: 38px;
+                        }
+
+                        .svg-ok {
+                            width: 16px;
+                            height: 20px;
+                            top: 3px;
+                            left: 38px;
+                        }
+
+                        .svg-google {
+                            width: 28px;
+                            height: 23px;
+                            top: 2px;
+                            left: 35px;
+                        }
+
+                    }
+
+                    .social-network__link {
+                        font-size: 14px;
+                    }
+
+                }
+                /*social-network изменен*/
+    
+                .section-form {
+                    padding-left: 39px;//
+                    .section-form__text {
+                        margin-bottom: 10px;//
+                        font-size: 14px;//
+                    }
+                    .name-and-family {
+                        padding-bottom: 10px;//
+                        .label-name,
+                        .label-family {
+                        font-size: 14px;//
+                        }
+                        .input-name,
+                        .input-family {
+                            width: 131px;//
+                            height: 27px;//
+                            font-size: 14px;//
+                        }
+                    }
+                    .fieldset-email {
+                        margin-bottom: 20px;//
+                    }
+    
+                    .fieldset-password {
+                        margin-bottom: 12px;//
+                    }
+    
+                    .label-email,
+                    .label-password {
+                        font-size: 14px;//
+                        padding-bottom: 3px;//
+                    }
+    
+                    .input-email,
+                    .input-password {
+                        height: 27px;//
+                        font-size: 14px;//
+                    }
+                    .user-agreement {
+                        .user-agreement__input {
+                            top: 7px;//
+                        }
+                        .user-agreement__text {
+                            font-size: 12px;//
+                        }
+                    }
+                    .button__inner {
+                        border: 2px solid #009999;//
+                        
+                    margin-top: 33px;//
+
+                        &:hover {
+                            border: 2px solid #26a9a9;//
+                        }
+
+                        .button-registration {
+                            font-size: 12px;//
+                            height: 33px;//
                         }
                     }
                 }
