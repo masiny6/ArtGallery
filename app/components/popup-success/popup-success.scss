@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // display: none;
 
     .popup-success__centering {
         width: 531px;
@@ -76,12 +75,12 @@
 
         }
         .popup-success__text {
-            margin-left: auto;
-            margin-right: auto;
             text-align: center;
             font-size: 17px;
             line-height: 18px;
             margin-bottom: 50px;
+            padding-left: 45px;
+                padding-right: 45px;
         }
         .popup-success__img {
             margin-left: auto;
@@ -94,32 +93,78 @@
     .popup-success {
 
         .popup-success__centering {
-            width: 370px;//
-            height: 329px;//
+            width: 370px;
+            height: 329px;
     
-            .popup-registration__close {
-                top: 15px; //
-                right: 15px; //
+            .popup-success__close {
+                top: 15px; 
+                right: 15px; 
             }
     
             .popup-header {
-                padding-top: 40px;//
-                width: 290px;//
-                padding-bottom: 10px;//
-                margin-bottom: 30px;//
+                padding-top: 40px;
+                width: 290px;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
     
                 .popup-header__title {
-                    font-size: 24px;//
+                    font-size: 24px;
                 }
     
             }
             .popup-success__text {
-                font-size: 14px;//
-                margin-bottom: 40px;//
+                font-size: 14px;
+                margin-bottom: 40px;
+                padding-left: 40px;
+                padding-right: 40px;
             }
             .popup-success__img {
-                width: 100px;//
-                height: 77px;//
+                width: 100px;
+                height: 77px;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .popup-success {
+
+        .popup-success__centering {
+            width: 290px;//
+            height: 276px;//
+    
+            .popup-success__close {
+                width: 20px;//
+                height: 20px;//
+
+                &::after,
+                &::before {
+                    width: 20px;//
+                } 
+            }
+    
+            .popup-header {
+                padding-top: 30px;//
+                width: 252px;//
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                &::before {
+                    width: 20px;//
+                    left: 50%;//
+                    margin-left: -10px;//
+                }
+                .popup-header__title {
+                    font-size: 22px;//
+                }
+    
+            }
+            .popup-success__text {
+                margin-bottom: 30px;//
+                padding-left: 20px;//
+                padding-right: 20px;//
+            }
+            .popup-success__img {
+                width: 88px;//
+                height: 68px;//
             }
         }
     }

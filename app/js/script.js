@@ -6,6 +6,7 @@
 @@include("imagesLoaded.js")
 @@include("ion.rangeSlider.js")
 @@include("lax.js")
+@@include("jquery.validate.js")
 @@include("../components/header/header.js")
 @@include("../components/slider/slider.js")
 @@include("../components/beginner/beginner.js")

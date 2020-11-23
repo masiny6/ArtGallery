@@ -2,6 +2,13 @@
  body {
      font-family: "Proxima-Nova-Rg", sans-serif;
  }
+ 
+.js-popup-close-general {
+    display: none !important;
+}
+// .js-popup-open-general {
+//    display: flex !important;
+// }
  //Cлайдер
  .swiper-container {
    width: 100%;

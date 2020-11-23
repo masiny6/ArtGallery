@@ -1,20 +1,23 @@
-<div class="popup-registration">
+<div class="popup-registration js-popup-registration js-popup-close-general">
     <div class="popup-registration__centering">
-        <form class="form-registration" action="#"></form>
-        <span class="popup-registration__close"></span>
+        <form class="form-registration js-form-registration" action="#">
+        <span class="popup-registration__close js-popup-general-close"></span>
         <div class="popup-header">
             <div class="title-and-text">
                 <span class="popup-header__title">Регистрация</span>
-                <span class="popup-header__text">Это бесплатно и займёт не более 3 минут</span>
+                <span class="popup-header__text">Это бесплатно и займёт не более 3 минут</span><span
+                    class="no-account__registr-mobile">Авторизоваться</span>
             </div>
             <div class="no-account">
                 <span class="no-account__text">Уже зарегистрированы?</span>
-                <span class="no-account__registr">Авторизоваться</span>
+                <span class="no-account__registr js-no-account__registr">Авторизоваться</span>
             </div>
         </div>
         <div class="artist-and-buyer">
-            <label class="label-artist"><input class="input-artist input-general" type="radio" name="choise" checked>Я художник</label>
-            <label class="label-buyer"><input class="input-buyer input-general" type="radio" name="choise">Я покупатель</label>
+            <label class="label-artist"><input class="input-artist input-general" type="radio" name="choise" checked>Я
+                художник</label>
+            <label class="label-buyer"><input class="input-buyer input-general" type="radio" name="choise">Я
+                покупатель</label>
         </div>
         <div class="network-and-form">
             <div class="social-network">
@@ -70,28 +73,29 @@
                 <span class="section-form__text">С помощью E-mail</span>
                 <div class="name-and-family">
                     <fieldset class="fieldset-name">
-                        <legend class="label-name">Имя</legend>
+                        <legend class="label-name label-general">Имя</legend>
                         <input class="input-name" type="text" name="name" required>
                     </fieldset>
                     <fieldset class="fieldset-family">
-                        <legend class="label-family">Фамилия</legend>
+                        <legend class="label-family label-general">Фамилия</legend>
                         <input class="input-family" type="text" name="family" required>
                     </fieldset>
                 </div>
                 <fieldset class="fieldset-email">
-                    <legend class="label-email">E-mail</legend>
+                    <legend class="label-email label-general">E-mail</legend>
                     <input class="input-email" type="email" name="email" required>
                 </fieldset>
                 <fieldset class="fieldset-password">
-                    <legend class="label-password">Пароль</legend>
+                    <legend class="label-password label-general">Пароль</legend>
                     <input class="input-password" type="password" name="password" required>
                 </fieldset>
                 <div class="user-agreement">
-                    <input class="user-agreement__input" type="checkbox" name="">
-                    <span class="user-agreement__text">Я согласен с <a class="user-agreement__link" href="#">пользовательским соглашением</a></span>
+                    <input class="user-agreement__input" type="checkbox" name="agreement" required>
+                    <span class="user-agreement__text label-general">Я согласен с <a class="user-agreement__link"
+                            href="#">пользовательским соглашением</a></span>
                 </div>
                 <div class="button__inner">
-                    <button class="button-registration">Зарегистрироваться</button>
+                    <button class="button-registration" type="submit">Зарегистрироваться</button>
                 </div>
             </div>
         </div>

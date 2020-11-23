@@ -8,7 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+
+    .no-account__registr-mobile {
+        display: none;
+    }
 
     .popup-registration__centering {
         width: 858px;
@@ -151,6 +154,7 @@
                 font-size: 17px;
                 line-height: 18px;
             }
+
             .label-artist {
                 margin-right: 50px;
             }
@@ -161,6 +165,7 @@
             margin-right: 40px;
             display: flex;
             margin-top: 22px;
+
             .social-network {
                 padding-right: 45px;
                 border-right: 1px solid #cccccc;
@@ -261,16 +266,25 @@
             .section-form {
                 padding-left: 45px;
                 width: 100%;
+
                 .section-form__text {
                     margin-bottom: 15px;
                     display: block;
                     font-size: 17px;
                     line-height: 18px;
                 }
+
                 .name-and-family {
                     display: flex;
                     justify-content: space-between;
                     padding-bottom: 10px;
+
+                    .fieldset-name,
+                    .fieldset-family {
+                        position: relative;
+                    }
+
+
                     .label-name,
                     .label-family {
                         margin-bottom: 5px;
@@ -280,6 +294,7 @@
                         font-size: 17px;
                         line-height: 18px;
                     }
+
                     .input-name,
                     .input-family {
                         width: 195px;
@@ -292,12 +307,16 @@
                         line-height: 18px;
                     }
                 }
+
                 .fieldset-email {
                     margin-bottom: 26px;
+                    position: relative;
                 }
 
                 .fieldset-password {
                     margin-bottom: 12px;
+                    position: relative;
+
                 }
 
                 .label-email,
@@ -318,7 +337,10 @@
                     font-size: 17px;
                     line-height: 18px;
                 }
+
                 .user-agreement {
+                    position: relative;
+
                     .user-agreement__input {
                         appearance: none;
                         width: 15px;
@@ -327,6 +349,7 @@
                         outline: 0;
                         position: relative;
                         top: 5px;
+
                         &:checked::before {
                             content: "";
                             position: absolute;
@@ -338,22 +361,26 @@
                             left: 1px;
                         }
                     }
+
                     .user-agreement__text {
                         font-size: 14px;
                         line-height: 18px;
                         color: #656565;
                     }
+
                     .user-agreement__link {
                         color: #656565;
                         border-bottom: 2px dotted #2e3237;
                         text-decoration: none;
                         transition: 0.3s;
+
                         &:hover {
                             opacity: 0.5;
                             transition: 0.3s;
                         }
                     }
                 }
+
                 .button__inner {
                     border: 3px solid #009999;
                     transition: 0.3s;
@@ -363,7 +390,7 @@
                         border: 3px solid #26a9a9;
                         transition: 0.3s;
                     }
-                    
+
                     .button-registration {
                         font-family: "Proxima-Nova-Lt", sans-serif;
                         font-weight: 600;
@@ -387,63 +414,91 @@
                         }
                     }
                 }
+
+                #name-error,
+                #family-error,
+                #email-error,
+                #password-error,
+                #agreement-error {
+                    color: red;
+                    position: absolute;
+                    font-size: 14px;
+                    bottom: -14px;
+                    left: 0;
+                    border: 0px !important;
+                }
+
+                .error {
+                    border: 1px solid red !important;
+                }
+
+                .label-error {
+                    color: red;
+                }
             }
         }
     }
+
+    // .js-label-general {
+    //     color: red;
+    // }
 }
+
 @media (max-width: 1279px) {
     .popup-registration {
         .popup-registration__centering {
-            width: 652px;//
-            height: 574px;//
-    
+            width: 652px;
+            height: 574px;
+
             .popup-registration__close {
-                top: 15px;//
-                right: 15px;//
+                top: 15px;
+                right: 15px;
             }
-    
+
             .popup-header {
-                padding-top: 45px;//
-                width: 574px;//
-            margin-left: auto;//
-            margin-right: auto;//
-                padding-bottom: 23px;//
-    
-    
+                padding-top: 45px;
+                width: 574px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 23px;
+
+
                 .popup-header__title {
-                    font-size: 30px;//
-                    padding-bottom: 0px;//
+                    font-size: 30px;
+                    padding-bottom: 0px;
                 }
-    
+
                 .popup-header__text {
-                    font-size: 12px;//
+                    font-size: 12px;
                 }
-    
+
                 .no-account {
-                    font-size: 12px;//
+                    font-size: 12px;
                 }
             }
+
             .artist-and-buyer {
-                width: 574px;//
-            margin-left: auto;//
-            margin-right: auto;//
-                height: 56px;//
-    
+                width: 574px;
+                margin-left: auto;
+                margin-right: auto;
+                height: 56px;
+
                 .label-artist,
                 .label-buyer {
-                    font-size: 14px;//
+                    font-size: 14px;
                 }
+
                 .label-artist {
-                    margin-right: 44px;//
+                    margin-right: 44px;
                 }
             }
-    
+
             .network-and-form {
-                width: 574px;//
-            margin-left: auto;//
-            margin-right: auto;//
-                margin-top: 20px;//
-                /*social-network изменен*/
+                width: 574px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 20px;
+
                 .social-network {
                     padding-right: 40px;
 
@@ -498,67 +553,222 @@
                     }
 
                 }
-                /*social-network изменен*/
-    
+
                 .section-form {
-                    padding-left: 39px;//
+                    padding-left: 39px;
+
                     .section-form__text {
-                        margin-bottom: 10px;//
-                        font-size: 14px;//
+                        margin-bottom: 10px;
+                        font-size: 14px;
                     }
+
                     .name-and-family {
-                        padding-bottom: 10px;//
+                        padding-bottom: 10px;
+
                         .label-name,
                         .label-family {
-                        font-size: 14px;//
+                            font-size: 14px;
                         }
+
                         .input-name,
                         .input-family {
-                            width: 131px;//
-                            height: 27px;//
-                            font-size: 14px;//
+                            width: 131px;
+                            height: 27px;
+                            font-size: 14px;
                         }
                     }
+
                     .fieldset-email {
-                        margin-bottom: 20px;//
+                        margin-bottom: 20px;
                     }
-    
+
                     .fieldset-password {
-                        margin-bottom: 12px;//
+                        margin-bottom: 12px;
                     }
-    
+
                     .label-email,
                     .label-password {
-                        font-size: 14px;//
-                        padding-bottom: 3px;//
+                        font-size: 14px;
+                        padding-bottom: 3px;
                     }
-    
+
                     .input-email,
                     .input-password {
-                        height: 27px;//
-                        font-size: 14px;//
+                        height: 27px;
+                        font-size: 14px;
                     }
+
                     .user-agreement {
                         .user-agreement__input {
-                            top: 7px;//
+                            top: 7px;
                         }
+
                         .user-agreement__text {
-                            font-size: 12px;//
+                            font-size: 12px;
                         }
                     }
+
                     .button__inner {
-                        border: 2px solid #009999;//
-                        
-                    margin-top: 33px;//
+                        border: 2px solid #009999;
+
+                        margin-top: 33px;
 
                         &:hover {
-                            border: 2px solid #26a9a9;//
+                            border: 2px solid #26a9a9;
                         }
 
                         .button-registration {
-                            font-size: 12px;//
-                            height: 33px;//
+                            font-size: 12px;
+                            height: 33px;
                         }
+                    }
+
+                    #name-error,
+                    #family-error,
+                    #email-error,
+                    #password-error,
+                    #agreement-error {
+                        color: red;
+                        position: absolute;
+                        font-size: 12px;
+                        bottom: -13px;
+                        left: 0;
+                        border: 0px !important;
+                    }
+                    
+
+                    .error {
+                        border: 1px solid red !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .popup-registration {
+        .popup-registration__centering {
+            width: 290px; //
+            height: 828px; //
+
+            .popup-registration__close {
+                width: 20px; //
+                height: 20px; //
+
+                &::after,
+                &::before {
+                    width: 20px; //
+                }
+            }
+
+            .popup-header {
+                padding-top: 35px; //
+                width: 252px; //
+                flex-direction: column; //
+                justify-content: center; //
+                text-align: center; //
+
+                &::before {
+                    width: 20px; //
+                    left: 50%; //
+                    margin-left: -10px; //
+                }
+
+                .popup-header__title {
+                    font-size: 22px; //
+                    margin-bottom: -5px; //
+                }
+
+
+
+                .no-account {
+                    display: flex; //
+                    justify-content: space-between; //
+
+                    .no-account__text {
+                        margin-right: 0px; //
+                    }
+                }
+            }
+
+            .artist-and-buyer {
+                width: 252px; //
+                min-height: 6px; //
+                display: block; //
+                border-bottom: 0px; //
+
+                .label-artist,
+                .label-buyer {
+                    margin-top: 30px; //
+                    display: inline-block; //
+                }
+
+                .label-artist {
+                    margin-right: 40px; //
+                    margin-left: 25px; //
+                }
+            }
+
+            .network-and-form {
+                width: 252px; //
+                margin-top: 5px; //
+                display: flex; //
+                flex-direction: column-reverse; //
+
+                .social-network {
+                    padding-right: 0px; //
+                    border-right: 0px; //
+                    border-top: 1px solid #cacaca; //
+                    text-align: center; //
+                    padding-top: 29px; //
+
+                    .social-network__elem {
+                        margin-left: auto; //
+                        margin-right: auto; //
+                    }
+                }
+
+                .section-form {
+                    padding-left: 0px; //
+
+                    .section-form__text {
+                        display: none; //
+                    }
+
+                    .name-and-family {
+                        padding-bottom: 10px;
+                        display: flex; //
+                        flex-direction: column; //
+
+                        .input-name,
+                        .input-family {
+                            width: 98%; //
+                            height: 27px;
+                            font-size: 14px;
+                        }
+
+                        .input-name {
+                            margin-bottom: 10px; //
+                        }
+                    }
+
+                    .user-agreement {
+                        display: flex; //
+
+                        .user-agreement__text {
+                            padding-top: 9px; //
+                            padding-left: 2px; //
+                            display: inline-block; //
+                        }
+                    }
+
+                    .button__inner {
+                        margin-top: 20px; //
+                        margin-bottom: 30px; //
+                    }
+                    #name-error {
+                        bottom: -2px;
                     }
                 }
             }

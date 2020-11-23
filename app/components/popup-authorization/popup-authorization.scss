@@ -8,7 +8,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
 
     .popup-authorization__centering {
         width: 858px;
@@ -206,10 +205,12 @@
 
                 .fieldset-email {
                     margin-bottom: 27px;
+                    position: relative;
                 }
 
                 .fieldset-password {
                     margin-bottom: 38px;
+                    position: relative;
                 }
 
                 .label-email,
@@ -287,6 +288,25 @@
                         }
                     }
                 }
+                #name-error,
+                #family-error,
+                #email-error,
+                #password-error,
+                #agreement-error {
+                    color: red;
+                    position: absolute;
+                    font-size: 14px;
+                    bottom: -14px;
+                    left: 0;
+                    border: 0px !important;
+                }
+
+                .error {
+                    border: 1px solid red !important;
+                }
+                .label-error {
+                    color: red;
+                }
             }
         }
     }
@@ -297,6 +317,7 @@
         .popup-authorization__centering {
             width: 652px;
             height: 404px;
+
             .popup-authorization__close {
                 top: 15px;
                 right: 15px;
@@ -416,6 +437,113 @@
                     .forgotten-password {
                         padding-top: 12px;
                         font-size: 12px;
+                    }
+                    #name-error,
+                    #family-error,
+                    #email-error,
+                    #password-error,
+                    #agreement-error {
+                        color: red;
+                        position: absolute;
+                        font-size: 12px;
+                        bottom: -13px;
+                        left: 0;
+                        border: 0px !important;
+                    }
+
+                    .error {
+                        border: 1px solid red !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .popup-authorization {
+        .popup-authorization__centering {
+            width: 290px;
+            height: 598px;
+
+            .popup-authorization__close {
+                width: 20px;
+                height: 20px;
+
+                &::after,
+                &::before {
+                    width: 20px;
+                }
+            }
+
+            .popup-header {
+                padding-top: 35px;
+                margin-left: 18px;
+                margin-right: 18px;
+                padding-bottom: 5px;
+                margin-bottom: 22px;
+                display: flex;
+                justify-content: center;
+
+                &::before {
+                    width: 20px;
+                    left: 50%;
+                    margin-left: -15px;
+                }
+
+                .popup-header__title {
+                    font-size: 22px;
+                }
+
+                .no-account {
+                    display: none;
+                }
+            }
+
+            .network-and-form {
+                margin-left: 18px;
+                margin-right: 18px;
+                flex-direction: column-reverse;
+
+                .social-network {
+                    padding-right: 0px;
+                    border-right: 0px;
+                    border-top: 1px solid #cacaca;
+                    text-align: center;
+                    padding-top: 29px;
+
+
+
+                    .social-network__elem {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+
+
+                }
+
+                .section-form {
+                    padding-left: 0px;
+
+                    .fieldset-email {
+                        margin-bottom: 15px;
+                    }
+
+
+                    .forgotten-password {
+                        margin-bottom: 29px;
+
+                        .forgotten-password__text {
+                            border-bottom: 2px dotted #2e3237;
+                            cursor: pointer;
+                            transition: 0.3s;
+
+                            &:hover {
+                                opacity: 0.5;
+                                transition: 0.3s;
+                            }
+                        }
                     }
                 }
             }

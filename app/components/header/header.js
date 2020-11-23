@@ -3,6 +3,7 @@ $(".languages__ru").on("click", function() {
 });
 $(".personal-account").on("click", function() {
     $(".drop-menu-account").toggleClass("drop-menu-account-js");
+    $(".js-popup-authorization").toggleClass("js-popup-close-general");
 });
 $(".list-etc__link .svg-search").on("click", function(e) {
     e.preventDefault();
