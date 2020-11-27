@@ -8,12 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 
     .popup-authorization__centering {
         width: 858px;
         height: 491px;
         background-color: white;
         position: relative;
+        margin: auto;
 
         .popup-authorization__close {
             position: absolute;
@@ -222,7 +224,7 @@
 
                 .input-email,
                 .input-password {
-                    width: 98%;
+                    width: 96%;
                     height: 39px;
                     border-radius: 0;
                     border: 1px solid #cbcbcb;
@@ -230,6 +232,7 @@
                     font-family: "Proxima-Nova-Rg", sans-serif;
                     font-size: 17px;
                     line-height: 18px;
+                    padding-left: 14px;
                 }
 
                 .button__inner {
@@ -419,6 +422,7 @@
                     .input-password {
                         height: 27px;
                         font-size: 14px;
+                        width: 94%;
                     }
 
                     .button__inner {

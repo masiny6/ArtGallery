@@ -9,12 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 
     .popup-success__centering {
         width: 531px;
         height: 389px;
         background-color: white;
         position: relative;
+        margin: auto;
 
         .popup-success__close {
             position: absolute;

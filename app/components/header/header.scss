@@ -3,7 +3,9 @@
     display: none;
 }
 
-
+.js-scroll-hidden {
+    overflow: hidden;
+}
 .main-header {
     width: 100%;
     position: fixed;
@@ -158,15 +160,15 @@
     cursor: pointer;
 }
 
-.personal-account::before {
+.personal-account__photo {
     content: "";
     position: absolute;
     background-image: url(../assets/images/user.png);
     background-repeat: no-repeat;
     width: 22px;
     height: 23px;
-    left: -32px;
-    top: -5px;
+    left: -28px;
+    top: -3px;
     cursor: pointer;
 }
 
@@ -771,13 +773,13 @@
     .personal-account {
         margin-right: 25px;
     }
-
-    .personal-account::before {
+    
+    .personal-account__photo {
         content: "";
         position: absolute;
-        background-image: url(../assets/images/background-login.jpg);
+        background-image: url(../assets/images/user-black.png);
         background-repeat: no-repeat;
-        background-position: cover;
+        background-position: 50% 50%;
         width: 42px;
         height: 42px;
         left: -32px;

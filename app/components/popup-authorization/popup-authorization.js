@@ -37,18 +37,51 @@ if ($(window).width() <= "767") {
 
 $(".js-popup-authorization .js-popup-general-close").on("click", function() {
     $(".js-popup-authorization").toggleClass("js-popup-close-general");
+    $(".main").toggleClass("js-scroll-hidden");
+        //Очистка при открытие попапа регистрации
+        document.querySelector(".popup-authorization .input-email").value = "";
+        document.querySelector(".popup-authorization .input-password").value = "";
+        $(".popup-authorization .label-password").css("color", "black");
+        $(".popup-authorization .label-email").css("color", "black");
+        $(".popup-authorization .input-email").removeClass("error");
+        $(".popup-authorization .input-password").removeClass("error");
+        $(".popup-authorization label").remove();
 });
 $(".js-popup-authorization .js-no-account__registr").on("click", function() {
     $(".js-popup-authorization").toggleClass("js-popup-close-general");
     //
-    $(".js-popup-registration").toggleClass("js-popup-close-general");
+    setTimeout(function () {
+        $(".js-popup-registration").toggleClass("js-popup-close-general");
+    }, 1);
     
-    
+//Очистка при открытие попапа регистрации
+        document.querySelector(".popup-authorization .input-email").value = "";
+        document.querySelector(".popup-authorization .input-password").value = "";
+        $(".popup-authorization .label-password").css("color", "black");
+        $(".popup-authorization .label-email").css("color", "black");
+        $(".popup-authorization .input-email").removeClass("error");
+        $(".popup-authorization .input-password").removeClass("error");
+        $(".popup-authorization label").remove();
+
 });
 $(".js-popup-authorization .js-forgotten-password__button").on("click", function() {
     $(".js-popup-authorization").toggleClass("js-popup-close-general");
+
     //
-    $(".js-popup-recovery").toggleClass("js-popup-close-general");
+    setTimeout(function () {
+        $(".js-popup-recovery").toggleClass("js-popup-close-general");
+    }, 1);
+    
+    //Очистка при открытие попапа регистрации
+    document.querySelector(".popup-authorization .input-email").value = "";
+    document.querySelector(".popup-authorization .input-password").value = "";
+    $(".popup-authorization .label-password").css("color", "black");
+    $(".popup-authorization .label-email").css("color", "black");
+    $(".popup-authorization .input-email").removeClass("error");
+    $(".popup-authorization .input-password").removeClass("error");
+    $(".popup-authorization label").remove();
+    
+    
 });
 
 $(document).ready(function () {
@@ -84,11 +117,11 @@ $(document).ready(function () {
         },
         errorPlacement: function (error, element) {
             element.parent().append(error);
-            if ($(".input-email").hasClass("error")) {
-                $(".label-email").css("color", "red");
+            if ($(".popup-authorization .input-email").hasClass("error")) {
+                $(".popup-authorization .label-email").css("color", "red");
             }
-            if ($(".input-password").hasClass("error")) {
-                $(".label-password").css("color", "red");
+            if ($(".popup-authorization .input-password").hasClass("error")) {
+                $(".popup-authorization .label-password").css("color", "red");
             }
 
         }
@@ -107,27 +140,41 @@ $(document).ready(function () {
 
     // $('.js-input-tel').inputmask('+7 (999) 999-99-99');
 });
-$(".input-email").on("input", function () {
+$(".popup-authorization .input-email").on("input", function () {
     setTimeout(function () {
-        if ($(".input-email").val().length >= 0) {
-            if ($(".input-email").hasClass("error")) {
-                $(".label-email").css("color", "red");
+        if ($(".popup-authorization .input-email").val().length >= 0) {
+            if ($(".popup-authorization .input-email").hasClass("error")) {
+                $(".popup-authorization .label-email").css("color", "red");
             } 
-            if ($(".input-email").hasClass("valid")) {
-                $(".label-email").css("color", "black");
+            if ($(".popup-authorization .input-email").hasClass("valid")) {
+                $(".popup-authorization .label-email").css("color", "black");
             }
         }
     }, 200);
 })
-$(".input-password").on("input", function () {
+$(".popup-authorization .input-password").on("input", function () {
     setTimeout(function () {
-        if ($(".input-password").val().length >= 0) {
-            if ($(".input-password").hasClass("error")) {
-                $(".label-password").css("color", "red");
+        if ($(".popup-authorization .input-password").val().length >= 0) {
+            if ($(".popup-authorization .input-password").hasClass("error")) {
+                $(".popup-authorization .label-password").css("color", "red");
             } 
-            if ($(".input-password").hasClass("valid")) {
-                $(".label-password").css("color", "black");
+            if ($(".popup-authorization .input-password").hasClass("valid")) {
+                $(".popup-authorization .label-password").css("color", "black");
             }
         }
     }, 200);
 })
+
+
+$(document).on("click", function (e){ // событие клика по странице
+    if (!$(".personal-account__name").is(e.target) && // если клик сделан не по элементу
+        $(".js-popup-authorization").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+            if (!$(".js-popup-authorization").hasClass("js-popup-close-general")) {
+                $(".main").toggleClass("js-scroll-hidden");
+            }
+            $(".js-popup-authorization").addClass("js-popup-close-general");
+                
+                
+            
+    }
+});

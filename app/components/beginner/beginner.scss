@@ -237,6 +237,11 @@
                 width: 100%;
             }
         }
+        .beginner-video {
+            .beginner-video__text {
+                box-shadow: inset 0px -76px 9px -31px rgba(0,0,0,0.60);
+            }
+        }
         .beginner-expert {
             width: 100%;
             .beginner-expert__photo {

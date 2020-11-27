@@ -1,10 +1,19 @@
 $(".languages__ru").on("click", function() {
     $(".languages-list").toggleClass("languages-list-js");
 });
+//Открытие попапа
+
+
 $(".personal-account").on("click", function() {
-    $(".drop-menu-account").toggleClass("drop-menu-account-js");
+    // $(".drop-menu-account").toggleClass("drop-menu-account-js");
     $(".js-popup-authorization").toggleClass("js-popup-close-general");
+    $(".main").toggleClass("js-scroll-hidden");
+
 });
+// $(".personal-account__photo").on("click", function() {
+//     console.log("fdf");
+//     $(".personal-account").click();
+// });
 $(".list-etc__link .svg-search").on("click", function(e) {
     e.preventDefault();
     $(".search-centering").toggleClass("search-centering-js");

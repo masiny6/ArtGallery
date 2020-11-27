@@ -4,11 +4,58 @@ $(".popup-registration .social-network__elem").on("click", function () {
 
 $(".js-popup-registration .js-popup-general-close").on("click", function () {
     $(".js-popup-registration").toggleClass("js-popup-close-general");
+    $(".main").toggleClass("js-scroll-hidden");
+    //Очистка при закрытие попапа регистрации
+    setTimeout(function () {
+    
+    document.querySelector(".js-popup-registration .input-email").value = "";
+    document.querySelector(".js-popup-registration .input-password").value = "";
+    document.querySelector(".js-popup-registration .input-family").value = "";
+    document.querySelector(".js-popup-registration .input-name").value = "";
+    document.querySelector(".js-popup-registration .input-agreement").value = "";
+}, 200);
+
+    $(".js-popup-registration .label-password").css("color", "black");
+    $(".js-popup-registration .label-email").css("color", "black");
+    $(".js-popup-registration .label-family").css("color", "black");
+    $(".js-popup-registration .label-name").css("color", "black");
+    $(".js-popup-registration .label-agreement").css("color", "black");
+
+    $(".js-popup-registration .input-email").removeClass("error");
+    $(".js-popup-registration .input-password").removeClass("error");
+    $(".js-popup-registration .input-family").removeClass("error");
+    $(".js-popup-registration .input-name").removeClass("error");
+    $(".js-popup-registration .user-agreement__input").removeClass("error");
+    $(".js-popup-registration label").remove();
 });
 $(".js-popup-registration .js-no-account__registr").on("click", function () {
     $(".js-popup-registration").toggleClass("js-popup-close-general");
     //
-    $(".js-popup-authorization").toggleClass("js-popup-close-general");
+    setTimeout(function () {
+        $(".js-popup-authorization").toggleClass("js-popup-close-general");
+    }, 1);
+        //Очистка при открытии попапа авторизации
+        setTimeout(function () {
+    
+            document.querySelector(".js-popup-registration .input-email").value = "";
+            document.querySelector(".js-popup-registration .input-password").value = "";
+            document.querySelector(".js-popup-registration .input-family").value = "";
+            document.querySelector(".js-popup-registration .input-name").value = "";
+            document.querySelector(".js-popup-registration .input-agreement").value = "";
+        }, 200);
+        
+            $(".js-popup-registration .label-password").css("color", "black");
+            $(".js-popup-registration .label-email").css("color", "black");
+            $(".js-popup-registration .label-family").css("color", "black");
+            $(".js-popup-registration .label-name").css("color", "black");
+            $(".js-popup-registration .label-agreement").css("color", "black");
+        
+            $(".js-popup-registration .input-email").removeClass("error");
+            $(".js-popup-registration .input-password").removeClass("error");
+            $(".js-popup-registration .input-family").removeClass("error");
+            $(".js-popup-registration .input-name").removeClass("error");
+            $(".js-popup-registration .user-agreement__input").removeClass("error");
+            $(".js-popup-registration label").remove();
 
 });
 $(document).ready(function () {
@@ -44,20 +91,20 @@ $(document).ready(function () {
         },
         errorPlacement: function (error, element) {
             element.parent().append(error);
-            if ($(".input-name").hasClass("error")) {
-                $(".label-name").css("color", "red");
+            if ($(".js-popup-registration .input-name").hasClass("error")) {
+                $(".js-popup-registration .label-name").css("color", "red");
             }
-            if ($(".input-family").hasClass("error")) {
-                $(".label-family").css("color", "red");
+            if ($(".js-popup-registration .input-family").hasClass("error")) {
+                $(".js-popup-registration .label-family").css("color", "red");
             }
-            if ($(".input-email").hasClass("error")) {
-                $(".label-email").css("color", "red");
+            if ($(".js-popup-registration .input-email").hasClass("error")) {
+                $(".js-popup-registration .label-email").css("color", "red");
             }
-            if ($(".input-password").hasClass("error")) {
-                $(".label-password").css("color", "red");
+            if ($(".js-popup-registration .input-password").hasClass("error")) {
+                $(".js-popup-registration .label-password").css("color", "red");
             }
-            if ($(".input-agreement").hasClass("error")) {
-                $(".label-agreement").css("color", "red");
+            if ($(".js-popup-registration .input-agreement").hasClass("error")) {
+                $(".js-popup-registration .label-agreement").css("color", "red");
             }
 
         }
@@ -77,65 +124,75 @@ $(document).ready(function () {
     // $('.js-input-tel').inputmask('+7 (999) 999-99-99');
 });
 
-$(".input-name").on("input", function () {
+$(".js-popup-registration .input-name").on("input", function () {
     setTimeout(function () {
-        if ($(".input-name").val().length >= 0) {
-            if ($(".input-name").hasClass("error")) {
-                $(".label-name").css("color", "red");
+        if ($(".js-popup-registration .input-name").val().length >= 0) {
+            if ($(".js-popup-registration .input-name").hasClass("error")) {
+                $(".js-popup-registration .label-name").css("color", "red");
             }
-            if ($(".input-name").hasClass("valid")) {
-                $(".label-name").css("color", "black");
+            if ($(".js-popup-registration .input-name").hasClass("valid")) {
+                $(".js-popup-registration .label-name").css("color", "black");
             }
         }
     }, 200);
 })
-$(".input-family").on("input", function () {
+$(".js-popup-registration .input-family").on("input", function () {
     setTimeout(function () {
-        if ($(".input-family").val().length >= 0) {
+        if ($(".js-popup-registration .input-family").val().length >= 0) {
             //
-            if ($(".input-family").hasClass("error")) {
-                $(".label-family").css("color", "red");
+            if ($(".js-popup-registration .input-family").hasClass("error")) {
+                $(".js-popup-registration .label-family").css("color", "red");
             }
-            if ($(".input-family").hasClass("valid")) {
-                $(".label-family").css("color", "black");
+            if ($(".js-popup-registration .input-family").hasClass("valid")) {
+                $(".js-popup-registration .label-family").css("color", "black");
             }
             //
         }
     }, 200);
 })
-$(".input-email").on("input", function () {
+$(".js-popup-registration .input-email").on("input", function () {
     setTimeout(function () {
-        if ($(".input-email").val().length >= 0) {
-            if ($(".input-email").hasClass("error")) {
-                $(".label-email").css("color", "red");
-            } 
-            if ($(".input-email").hasClass("valid")) {
-                $(".label-email").css("color", "black");
+        if ($(".js-popup-registration .input-email").val().length >= 0) {
+            if ($(".js-popup-registration .input-email").hasClass("error")) {
+                $(".js-popup-registration .label-email").css("color", "red");
+            }
+            if ($(".js-popup-registration .input-email").hasClass("valid")) {
+                $(".js-popup-registration .label-email").css("color", "black");
             }
         }
     }, 200);
 })
-$(".input-password").on("input", function () {
+$(".js-popup-registration .input-password").on("input", function () {
     setTimeout(function () {
-        if ($(".input-password").val().length >= 0) {
-            if ($(".input-password").hasClass("error")) {
-                $(".label-password").css("color", "red");
-            } 
-            if ($(".input-password").hasClass("valid")) {
-                $(".label-password").css("color", "black");
+        if ($(".js-popup-registration .input-password").val().length >= 0) {
+            if ($(".js-popup-registration .input-password").hasClass("error")) {
+                $(".js-popup-registration .label-password").css("color", "red");
+            }
+            if ($(".js-popup-registration .input-password").hasClass("valid")) {
+                $(".js-popup-registration .label-password").css("color", "black");
             }
         }
     }, 200);
 })
-$(".input-agreement").on("input", function () {
+$(".js-popup-registration .input-agreement").on("input", function () {
     setTimeout(function () {
-        if ($(".input-agreement").val().length >= 0) {
-            if ($(".input-agreement").hasClass("error")) {
-                $(".label-agreement").css("color", "red");
-            } 
-            if ($(".input-agreement").hasClass("valid")) {
-                $(".label-agreement").css("color", "black");
+        if ($(".js-popup-registration .input-agreement").val().length >= 0) {
+            if ($(".js-popup-registration .input-agreement").hasClass("error")) {
+                $(".js-popup-registration .label-agreement").css("color", "red");
+            }
+            if ($(".js-popup-registration .input-agreement").hasClass("valid")) {
+                $(".js-popup-registration .label-agreement").css("color", "black");
             }
         }
     }, 200);
 })
+
+$(document).on("click", function (e){ // событие клика по странице
+    if (!$(".personal-account__name").is(e.target) && // если клик сделан не по элементу
+        $(".js-popup-registration").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+            if (!$(".js-popup-registration").hasClass("js-popup-close-general")) {
+                $(".main").toggleClass("js-scroll-hidden");
+            }
+            $(".js-popup-registration").addClass("js-popup-close-general");
+    }
+});
