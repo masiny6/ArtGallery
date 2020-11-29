@@ -6,6 +6,7 @@ var min = 0;
 var max = 1000000;
 var from = 0;
 var to = 0;
+
 $("#range-price-js").ionRangeSlider({
     type: "double",
     grid: false,
@@ -70,6 +71,7 @@ $("#range-size-js").ionRangeSlider({
     to: 740,
     step: 250
 });
+var instanceSize = $("#range-size-js").data("ionRangeSlider");
 // var attr = $("#range-size-js").attr("data-size-1");
 // console.log(attr);
 // // $(".irs-grid-text").each(function (index, element) {
@@ -154,8 +156,28 @@ $(".tab-inner-text").each(function (index, element) {
 $(".tab-inner-elem").each(function (index, element) {
     $(element).attr("id", index);
 });
+// Кнопка сбросить фильтр
 $(".js-button-reset__inner").on("click", function () {
     $(".tab-inner-text").removeClass("js-tab-inner-text");
+    instance.update({
+        from: 200000,
+        to: 800000
+    });
+    instanceSize.update({
+        from: 230,
+        to: 740,
+    });
+    $(".js-grid-text-0").text("S");
+    $(".js-grid-text-1").text("M");
+    $(".js-grid-text-2").text("L");
+    $(".js-grid-text-3").text("XL");
+    $(".js-grid-text-4").text("XXL");
+
+    setTimeout(function () {
+        $inputFrom.val("200000");
+        $inputTo.val("800000");
+    }, 1);
+
 });
 
 $(".filter-tabs__elem").on("click", function () {
@@ -164,7 +186,7 @@ $(".filter-tabs__elem").on("click", function () {
     $(".tab-inner").removeClass("js-tab-inner-active");
     $(".filter-tabs__elem").removeClass("js-filter-tabs")
     $(this).addClass("js-filter-tabs");
-    $(".filter-tabs__elem").removeClass("js-filter-tabs-border")//
+    $(".filter-tabs__elem").removeClass("js-filter-tabs-border") //
     var asd = $(this);
     if ($(window).width() <= "768") {
         $(".filter-tabs__elem").removeClass("js-filter-tabs");

@@ -167,14 +167,18 @@ $(".popup-authorization .input-password").on("input", function () {
 
 
 $(document).on("click", function (e){ // событие клика по странице
-    if (!$(".personal-account__name").is(e.target) && // если клик сделан не по элементу
-        $(".js-popup-authorization").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+    // if (!$(".personal-account__name").is(e.target) && // если клик сделан не по элементу
+    //     $(".js-popup-authorization").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
+    //         if (!$(".js-popup-authorization").hasClass("js-popup-close-general")) {
+    //             $(".main").toggleClass("js-scroll-hidden");
+    //         }
+    //         $(".js-popup-authorization").addClass("js-popup-close-general");
+    // }
+    if (!$(".personal-account__photo").is(e.target) && // если клик сделан не по элементу
+        $(".js-popup-authorization").has(e.target).length === 0 && !$(".personal-account__photo-white").is(e.target)) { // если клик сделан не по вложенным элементам
             if (!$(".js-popup-authorization").hasClass("js-popup-close-general")) {
                 $(".main").toggleClass("js-scroll-hidden");
             }
             $(".js-popup-authorization").addClass("js-popup-close-general");
-                
-                
-            
     }
 });
