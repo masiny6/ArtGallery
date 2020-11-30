@@ -1,10 +1,10 @@
 
-// $(".svg-basket").on("click", function() {
-//     $(this).toggleClass("svg-basket-js");
-// })
-// $(".svg-heart").on("click", function() {
-//     $(this).toggleClass("svg-heart-js");
-// })
+$(".svg-basket").on("click", function() {
+    $(this).toggleClass("svg-basket-js");
+})
+$(".svg-heart").on("click", function() {
+    $(this).toggleClass("svg-heart-js");
+})
 var swiper = new Swiper('.works-section .swiper-container', {
     slidesPerView: 4,
     spaceBetween: 40,
@@ -14,13 +14,12 @@ var swiper = new Swiper('.works-section .swiper-container', {
     },
     breakpoints: {
         320: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 7
         },
         768: {
-            slidesPerView: 3,
-            spaceBetween: 44,
-            centeredSlides: true
+            slidesPerView: 3.5,
+            spaceBetween: 44
         },
         1280: {
             slidesPerView: 4,
