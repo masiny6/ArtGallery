@@ -170,6 +170,14 @@
     top: -3px;
     cursor: pointer;
 }
+.main-no-authorization .personal-account__photo {
+    background-image: url(../assets/images/background-login.jpg);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    top: -8px;
+    background-size: cover;
+}
 .main .personal-account {
     margin-right: 200px;
 }
@@ -196,7 +204,7 @@
     width: 277px;
     min-height: 393px;
     top: 54px;
-    left: -110px;
+    left: -75px;
 
     .centering-lists {
         width: 230px;
@@ -462,7 +470,14 @@
 }
 
 @media (max-width: 1279px) {
-
+    .drop-menu-account {
+        position: absolute;
+        background-color: white;
+        width: 277px;
+        min-height: 393px;
+        top: 54px;
+        left: 13px;
+    }
     .burger-menu,
     .menu-phone {
         display: block;
