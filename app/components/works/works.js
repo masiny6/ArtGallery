@@ -1,16 +1,16 @@
-var msnry = new Masonry('.js-grid', {
+var msnry = new Masonry('.works-section-masonry .js-grid', {
     // options
-    itemSelector: '.js-grid__item',
-    columnWidth: '.js-grid__sizer',
-    gutter: '.js-grid__gutter',
+    itemSelector: '.works-section-masonry .js-grid__item',
+    columnWidth: '.works-section-masonry .js-grid__sizer',
+    gutter: '.works-section-masonry .js-grid__gutter',
     horizontalOrder: true,
-    stamp: '.js-static-item',
+    stamp: '.works-section-masonry .js-static-item',
     percentPosition: true
 });
 $(".sort-list-js").select2({
         dropdownPosition: 'below'
 });
-$(".grid").imagesLoaded(function(){
+$(".works-section-masonry .grid").imagesLoaded(function(){
     msnry.layout();
 });
 

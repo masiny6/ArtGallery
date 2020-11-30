@@ -38,6 +38,8 @@ if ($(window).width() <= "767") {
 $(".js-popup-authorization .js-popup-general-close").on("click", function() {
     $(".js-popup-authorization").toggleClass("js-popup-close-general");
     $(".main").toggleClass("js-scroll-hidden");
+    $(".product-card-main").toggleClass("js-scroll-hidden");
+                $(".popular-filter-main").toggleClass("js-scroll-hidden");
         //Очистка при открытие попапа регистрации
         document.querySelector(".popup-authorization .input-email").value = "";
         document.querySelector(".popup-authorization .input-password").value = "";
@@ -167,17 +169,13 @@ $(".popup-authorization .input-password").on("input", function () {
 
 
 $(document).on("click", function (e){ // событие клика по странице
-    // if (!$(".personal-account__name").is(e.target) && // если клик сделан не по элементу
-    //     $(".js-popup-authorization").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
-    //         if (!$(".js-popup-authorization").hasClass("js-popup-close-general")) {
-    //             $(".main").toggleClass("js-scroll-hidden");
-    //         }
-    //         $(".js-popup-authorization").addClass("js-popup-close-general");
-    // }
+
     if (!$(".personal-account__photo").is(e.target) && // если клик сделан не по элементу
         $(".js-popup-authorization").has(e.target).length === 0 && !$(".personal-account__photo-white").is(e.target)) { // если клик сделан не по вложенным элементам
             if (!$(".js-popup-authorization").hasClass("js-popup-close-general")) {
                 $(".main").toggleClass("js-scroll-hidden");
+                $(".product-card-main").toggleClass("js-scroll-hidden");
+                $(".popular-filter-main").toggleClass("js-scroll-hidden");
             }
             $(".js-popup-authorization").addClass("js-popup-close-general");
     }
