@@ -30,6 +30,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
     "i": "^0.3.6",
+    "gulp-sourcemaps": "^2.6.4",
     "npm": "^6.14.8"
   }
 }

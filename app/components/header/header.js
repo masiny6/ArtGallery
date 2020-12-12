@@ -32,18 +32,22 @@ $(".list-etc__link .svg-search").on("click", function (e) {
 });
 $(".still").mouseleave(function () {
     $(".still-centering").toggleClass("still-js");
+    $(this).toggleClass("js-still-active");
 })
 $(".still").mouseenter(function () {
     $(".still-centering").toggleClass("still-js");
     $(".drop-menu-account").addClass("drop-menu-account-js");
     $(".languages-list").addClass("languages-list-js");
     $(".search-centering").addClass("search-centering-js");
+    $(this).toggleClass("js-still-active");
 });
 $(".still-centering").mouseleave(function () {
     $(".still-centering").toggleClass("still-js");
+    $(".still").toggleClass("js-still-active");
 })
 $(".still-centering").mouseenter(function () {
     $(".still-centering").toggleClass("still-js");
+    $(".still").toggleClass("js-still-active");
 });
 $(".burger-menu").on("click", function () {
     $(".main-navigation").toggleClass("main-navigation-js");
@@ -61,5 +65,9 @@ $(document).on("click", function (e) { // событие клика по стр�
         $(".search-centering").has(e.target).length === 0) { // если клик сделан не по вложенным элементам
         $(".search-centering").addClass("search-centering-js");
         $('.search-form__input-js').val('');
+    }
+    if (!$(".personal-account__photo").is(e.target) && // если клик сделан не по элементу
+        $(".drop-menu-account").has(e.target).length === 0 && !$(".personal-account__name").is(e.target)) { // если клик сделан не по вложенным элементам
+        $(".drop-menu-account").addClass("drop-menu-account-js");
     }
 });

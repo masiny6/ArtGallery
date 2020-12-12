@@ -1,7 +1,9 @@
 $(".beginner-video-js").on("click", function() {
-    $("body").css("overflow", "hidden");
-    $(".beginner-popup").toggleClass("beginner-popup-js");
     $(".beginner-popup__video").attr("src", "https://www.youtube.com/embed/R8Yd-M9vfI0?autoplay=1");
+    setTimeout(function() {
+        $("body").css("overflow", "hidden");
+        $(".beginner-popup").toggleClass("beginner-popup-js");
+    },250)
 });
 $(".beginner-popup__exit").on("click", function(e) {
     e.preventDefault();

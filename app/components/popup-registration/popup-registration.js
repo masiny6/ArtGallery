@@ -84,7 +84,9 @@ $(document).ready(function () {
     //     return this.optional(element) || $(element).inputmask('unmaskedvalue').length === 10;
     // }, 'Введите корректный номер');
 
+
     $('.js-form-registration').validate({
+
         submitHandler: function (form) {
             // Отправка формы при успешной валидации
             $(form).trigger('formSubmit');
@@ -110,7 +112,10 @@ $(document).ready(function () {
         }
 
     });
-
+    jQuery.validator.addMethod("laxEmail", function(value, element) {
+        // allow any non-whitespace characters as the host part
+        return this.optional( element ) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@(?:\S{1,63})$/.test( value );
+      }, 'Please enter a valid email address.');
     // $('.js-form-login').validate({
     //     submitHandler: function(form) {
     //         // Отправка формы при успешной валидации

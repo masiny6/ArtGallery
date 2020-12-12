@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 var fileinclude = require('gulp-file-include');
 var uglify = require('gulp-uglify-es').default;
 var imageMin = require('gulp-imagemin');
+var sourcemaps = require('gulp-sourcemaps');
 var del = require('del');
 
 gulp.task('html', function () {
@@ -37,6 +38,7 @@ gulp.task('css', function () {
 		.pipe(rename({
 			suffix: '.min'
 		}))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/css'))
 		.pipe(browserSync.stream())
 });
@@ -49,8 +51,10 @@ gulp.task('js', function () {
 		    prefix: '@@',
 		    basepath: '@file',
 			indent: true
-	    }))
+		}))
+		.pipe(sourcemaps.init())
 		.pipe(uglify())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/js'))
 		.pipe(browserSync.reload({
 			stream: true

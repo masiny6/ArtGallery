@@ -86,6 +86,10 @@
     bottom: -30px;
     left: 0px;
 }
+.js-still-active {
+    background-color: black;
+    transition: 0.3s;
+}
 
 .still-centering {
     position: absolute;
@@ -114,12 +118,13 @@
         font-size: 16px;
         line-height: 18px;
         text-decoration: none;
+        display: block;
     }
 
     .still-list__link:hover {
         background-color: #333333;
         padding: 13px 15px 13px 15px;
-        margin: -14px -15px -14px -15px;
+        margin: -13px -15px -13px -15px;
         color: white;
         transition: 0.3s;
     }
@@ -156,7 +161,7 @@
 .personal-account {
     position: relative;
     max-width: 125px;
-    margin-right: 50px;
+    margin-right: 55px;
 }
 
 .personal-account__photo {
@@ -176,22 +181,24 @@
     width: 35px;
     height: 35px;
     top: -8px;
+    left: -45px;
     background-size: cover;
 }
 .main .personal-account {
-    margin-right: 200px;
+    margin-right: 170px;
+    left: 60px;
+    top: 0px;
 }
 //Тестирование
 .main-no-authorization .personal-account {
-    margin-right: 200px;
+    margin-right: 50px;
 }
 .personal-account__name {
     font-family: "Proxima-Nova-Rg", sans-serif;
     font-size: 16px;
     line-height: 18px;
     text-decoration: none;
-    color: white;
-    display: none;//тестирование
+    color: white;//тестирование
 }
 
 .personal-account__name:hover {
@@ -245,16 +252,15 @@
                 margin: -16px 0px -16px 0px;
                 color: white;
                 transition: 0.3s;
+                
             }
         }
     }
-    .exit {
+    .exit__link {
         position: relative;
-        &__link {
-            padding-left: 36px !important;
-        }
+        padding-left: 36px !important;
     }
-    .exit::before {
+    .exit__link::before {
         content: "";
         position: absolute;
         background-repeat: no-repeat;
@@ -264,11 +270,13 @@
         left: 2px;
         background-image: url(../assets/images/exit.png);
     }
-    .exit:hover::before {
+    .exit__link:hover::before {
         top: 50%;
         margin-top: -10px;
         background-image: url(../assets/images/exit-hover.png) !important;
     }
+    
+    
 }
 
 .drop-menu-account-js {
@@ -351,7 +359,7 @@
         font-weight: 300;
         font-size: 24px;
         line-height: 42px;
-        width: 100%;
+        width: 99.2%;
         border: 0px;
         outline: 0px;
         height: 70px;
@@ -476,7 +484,7 @@
         width: 277px;
         min-height: 393px;
         top: 54px;
-        left: 13px;
+        left: -100px;
     }
     .burger-menu,
     .menu-phone {
@@ -618,6 +626,7 @@
                 }
                 .still-list__link {
                     padding: 8px 28px 8px 28px;
+                    display: inline-block;
                 }
             
                 .still-list__link:hover {
@@ -656,6 +665,12 @@
         left: 135px;
         top: -3px;
         cursor: pointer;
+    }
+    .personal-account {
+        margin-right: 70px;
+    }
+    .main .personal-account {
+        left: -30px;
     }
     
 }
@@ -711,7 +726,9 @@
         .main-navigation {
             min-height: 350px;
             top: 57px;
+            left: 0px;
             left: -20px;
+            padding: 0px;
             &::before {
                 display: none;
             }
@@ -722,7 +739,7 @@
                 padding-bottom: -10px;
                 .navigation__link {
                     padding: 8px 15px 8px 15px;
-                    margin-left: 13px;
+                    margin-left: 33px !important;
                     color: black;
                 }
                 .navigation__elem {
@@ -740,6 +757,9 @@
     }
     .still-list {
         flex-direction: column;
+        .still-list__elem:first-child {
+            margin-top: -10px;
+        }
         .still-list__elem {
         display: block !important;
         position: relative;
@@ -751,14 +771,16 @@
         .still-list__elem:nth-child(3)::before {
             content: "";
             position: absolute;
-            width: 100%;
+            width: 90%;
             height: 1px;
-            left: -15px;
+            left: 33px;
             top: -15px;
             background-color: gray;
         }
         .still-list__elem:not(:last-child) {
-            margin-bottom: 25px;
+            margin-bottom: 10px;
+        }.still-list__link {
+            margin-left: 33px !important;
         }
     }
     .copyright-mobile {
@@ -771,10 +793,9 @@
         padding-top: 19px;
         padding-bottom: 19px;
         text-align: center;
-        padding-right: 15%;
         margin-top: 0px;
         position: relative;
-        left: -16px;
+        left: 0px;
         bottom: -30px;
         display: block !important;
     }
@@ -861,6 +882,7 @@
     }
     .main .personal-account {
         margin-right: 20px;
+        left: 0px;
     }
     .main-no-authorization .personal-account {
         margin-right: 20px;

@@ -111,7 +111,7 @@ $(document).ready(function () {
     // $.validator.addMethod('js-input-tel', function(value, element) {
     //     return this.optional(element) || $(element).inputmask('unmaskedvalue').length === 10;
     // }, 'Введите корректный номер');
-
+     
     $('.js-form-authorization').validate({
         submitHandler: function (form) {
             // Отправка формы при успешной валидации
@@ -129,7 +129,10 @@ $(document).ready(function () {
         }
 
     });
-
+    $.validator.methods.email = function( value, element ) {
+        return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+      }
+     
     // $('.js-form-login').validate({
     //     submitHandler: function(form) {
     //         // Отправка формы при успешной валидации
