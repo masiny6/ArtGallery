@@ -7,9 +7,7 @@ var swiperProduct = new Swiper('.product-card .swiper-container-one', {
     direction: "vertical",
     slidesPerView: 6,
     spaceBetween: 10,
-    thumbs: {
-        swiper: swiperProduct1
-      },
+    
     breakpoints: {
         320: {
             slidesPerView: 4,
@@ -25,16 +23,19 @@ var swiperProduct = new Swiper('.product-card .swiper-container-one', {
             spaceBetween: 10
         }
     },
+    thumbs: {
+        swiper: swiperProduct1
+    }
 });
 
 setTimeout(function(){
     swiperProduct.update();
     swiperProduct1.update();
-},500)
+},500);
 $(window).resize(function (){
     swiperProduct.update();
     swiperProduct1.update();
-})
+});
 var swiperProduct1 = new Swiper('.product-card .swiper-container-two', {
     navigation: {
         nextEl: '.swiper-button-next',
